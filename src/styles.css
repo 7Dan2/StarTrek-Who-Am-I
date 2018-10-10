@@ -1,1 +1,51 @@
 /* You can add global styles to this file, and also import other style files */
+
+.vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+    background-color:transparent !important;
+    display: flex;
+    align-items: center;
+    
+}
+body {           
+    background: url("./assets/apod.jpg") no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+     
+  }
+
+  .btn-primary{
+    background: #FD3FB3!important;
+    border-radius: 0px !important;
+  }
+
+  .btn{
+
+    background: #FD3FB3!important;
+    
+  }
+  .middle-text{
+      font-size: 25px;
+  }
+
+  .top-text{
+      font-size: 45px;
+  }
+
+  .nav-items-center{
+    font-size: 20px;
+}
+
+  .text-log-top{
+      font-size: 30px;
+  }
+  
+  
+  .text-log-bottom{
+      font-size: 18px;
+
+
+  }

@@ -4,11 +4,20 @@ import { HomeComponent } from './../../../project/src/app/pages/home/home.compon
 import { NavbarComponent } from './elements/navbar/navbar.component';
 import { ModalComponent } from './modal/modal.component';
 import { CardsComponent } from './cards/cards.component';
+
+import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+
+const appRoutes: Routes = [
+  { path: 'home', component: HomeComponent },
+  { path: 'about',component: AboutComponent },
+  { path: 'game',component: CardsComponent },
+
+];
 
 
 
@@ -25,7 +34,10 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(
+      appRoutes
+    ),
   ],
   providers: [],
   bootstrap: [AppComponent]
