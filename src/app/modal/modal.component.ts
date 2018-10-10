@@ -1,5 +1,5 @@
+import { Planet } from './../planet';
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModalComponent implements OnInit {
 
+  planet:Planet = {
+
+    name: ['Mercury','Venus','Earth','Mars','Jupiter','Saturn','Uranus','Neptune']
+  }
   constructor() { }
 
   ngOnInit() {
