@@ -16,17 +16,19 @@
             </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" routerLink="/game" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         PLANET
                       </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a *ngFor="let planet of planetList" class="dropdown-item" href="#">{{planet}}</a>
+                        <a *ngFor="let planet of planetList" class="dropdown-item" data-toggle="modal" href="#">{{planet}}</a>
                       </div>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> SATELLITES </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a *ngFor="let satellite of satellitesList" class="dropdown-item" href="#">{{satellite}}</a>
+                        <app-modal></app-modal>
+
                       </div>
                 </li>
                 <li class="nav-item">
@@ -34,7 +36,6 @@
                 </li>
             
           </ul>
-          
         </div>
        
     
