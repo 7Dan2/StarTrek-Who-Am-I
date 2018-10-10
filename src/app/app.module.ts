@@ -1,13 +1,17 @@
 import { JumbotronComponent } from './elements/jumbotron/jumbotron.component';
 import { AboutComponent } from './pages/about/about.component';
 import { HomeComponent } from './../../../project/src/app/pages/home/home.component';
+import { NavbarComponent } from './elements/navbar/navbar.component';
+import { ModalComponent } from './modal/modal.component';
 import { CardsComponent } from './cards/cards.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './elements/navbar/navbar.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -16,7 +20,8 @@ import { NavbarComponent } from './elements/navbar/navbar.component';
     HomeComponent,
     AboutComponent,
     NavbarComponent,
-    JumbotronComponent
+    JumbotronComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
