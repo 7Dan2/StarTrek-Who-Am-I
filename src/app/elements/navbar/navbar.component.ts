@@ -1,5 +1,4 @@
 import { Planet } from './../../planet';
-import { SatellitesComponent } from './../../../../../project/src/app/pages/satellites/satellites.component';
 import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-navbar',
