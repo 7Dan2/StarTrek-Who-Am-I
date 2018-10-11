@@ -12,8 +12,7 @@ export class NavbarComponent implements OnInit {
   
   planet:Planet = {
 
-    name: ['Mercury','Venus','Earth','Mars','Jupiter','Saturn','Uranus','Neptune'],
-    img: ['']
+    name: ['Mercury','Venus','Earth','Mars','Jupiter','Saturn','Uranus','Neptune'];
     
   }
   constructor() { }
