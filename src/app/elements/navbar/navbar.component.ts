@@ -22,7 +22,18 @@ export class NavbarComponent implements OnInit {
       "Saturn":"https://solarsystem.nasa.gov/system/feature_items/images/28_saturn.png",
       "Uranus":"https://solarsystem.nasa.gov/system/feature_items/images/29_uranus.png",
       "Neptune":"https://solarsystem.nasa.gov/system/feature_items/images/30_neptune.png"
-     }
+     },
+     sat:{
+
+      "Mercury": 0,
+      "Venus": 0,
+      "Earth": 1,
+      "Mars": 2,
+      "Jupiter": 79,
+      "Saturn": 61,
+      "Uranus": 27,
+      "Neptune": 14
+   }
 }
   constructor() { 
     console.log(this.planet.info);
