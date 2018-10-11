@@ -11,22 +11,25 @@
         <div class="collapse navbar-collapse nav-items-center" id="navbarSupportedContent">
           <ul class="navbar-nav  mx-auto">
                 
-            <li class="nav-item">
-                <a class="nav-link text-white" routerLink="/about">ABOUT</a>
-            </li>
+
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         PLANET
                       </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a *ngFor="let planet of planetList" class="dropdown-item" data-toggle="modal" href="#">{{planet}}</a>
+                        <a *ngFor="let plan of planet.info | keyvalue" class="dropdown-item"  data-toggle="modal" [attr.data-target]="'#' + plan.key" href="#">{{plan.key}}</a>
+                        
                       </div>
+                      <app-modal></app-modal>
+
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> SATELLITES </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a *ngFor="let satellite of satellitesList" class="dropdown-item" href="#">{{satellite}}</a>
+
+                        <a *ngFor="let satellite of planet.sat | keyvalue" class="dropdown-item" href="#">{{satellite.key}}({{satellite.value}})</a>
+
                         <app-modal></app-modal>
 
                       </div>
