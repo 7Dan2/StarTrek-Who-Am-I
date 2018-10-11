@@ -1,14 +1,23 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-    <div class="pic d-flex justify-content-center ">
-        <h1>
-            Welcome to {{ title }} ! 
-          
-        <img src="https://upload.wikimedia.org/wikipedia/en/b/bb/Starfleet_command_emblem.png"/>
-      </h1>
-  </div>
+<div class="container-fluid">
+<div class="row" id="heading" >
+        <div class="col-lg-2 col-md-2 justify-content-center">
+                <img src="https://upload.wikimedia.org/wikipedia/en/b/bb/Starfleet_command_emblem.png"/>
+            </div>
+    <div class="col-lg-10 col-md-10">
+        <div class="pic d-flex justify-content-center ">
+            <h1>
+                WELCOME TO  {{ title }} ! 
+            </h1>
+           <p>Pic a card and try to bet the name of the planet</p>
+        </div>
+    </div>
+    
+</div>
+
   
-  <p>Choose a card and try to bet he name of the planet</p>
+  
   <app-cards></app-cards>
-  </div>
+</div>
+  
 
