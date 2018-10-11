@@ -17,7 +17,7 @@ export class NavbarComponent implements OnInit {
       "Mercury":"https://solarsystem.nasa.gov/system/feature_items/images/18_mercury_new.png" ,
       "Venus":"https://solarsystem.nasa.gov/system/feature_items/images/27_venus_jg.png",
       "Earth":"https://solarsystem.nasa.gov/system/feature_items/images/17_earth.png",
-      "Mars":"https://solarsystem.nasa.gov/system/feature_items/images/16_jupiter_new.png",
+      "Mars":"https://solarsystem.nasa.gov/system/stellar_items/list_view_images/6_mars_480x320.jpg",
       "Jupiter":"https://solarsystem.nasa.gov/system/feature_items/images/16_jupiter_new.png",
       "Saturn":"https://solarsystem.nasa.gov/system/feature_items/images/28_saturn.png",
       "Uranus":"https://solarsystem.nasa.gov/system/feature_items/images/29_uranus.png",
