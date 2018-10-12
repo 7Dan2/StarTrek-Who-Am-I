@@ -10,7 +10,7 @@
   
   <div class="card-deck">
 
-      <div class="col-lg-3 col-md-6">
+      <div class="col-lg-3 col-md-3">
         <div class="card shadow border-secondary mb-3">
             <img class="card-img-top max-width: 100%" src="https://solarsystem.nasa.gov/system/feature_items/images/16_jupiter_new.png" alt="Jupiter" id="img1" >
                 <div class="card-body">
@@ -27,8 +27,8 @@
                                 <button class="btn btn-outline-success" type="button" id="button-addon2">Validate</button>
                               </div>
                             <!-- Button trigger modal -->
-                                <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#modJupit" >
-                                Need infos?
+                                <button type="button" class="btn btn-outline-secondary btn-block" data-toggle="modal" data-target="#modJupit" >
+                                        <span class="glyphicon glyphicon-search"></span>Need infos?
                                 </button>
                                 
                                   
@@ -42,7 +42,7 @@
         
     
 
-      <div class="col-lg-3 col-md-6">
+      <div class="col-lg-3 col-md-3">
 
           <div class="card shadow border-secondary mb-3 w-100">
                   <img class="card-img-top max-width: 100%" src="https://solarsystem.nasa.gov/system/feature_items/images/17_earth.png" alt="Earth">
@@ -53,23 +53,21 @@
                           <p class="card-text">Je possède de l'eau sous forme liquide</p>
                       </div>
                       <div class="card-footer justify-content-center">
-
-                          
-                          <div class="input-group mb-3">
-                              <input type="text" class="form-control" placeholder="Enter your answer here" aria-label="Recipient's username" aria-describedby="button-addon2">
-                                  <div class="input-group-append justify-content-center">
-                                      <button class="btn btn-outline-success" type="button" id="button-addon2">Validate</button>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Enter your answer here" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                    <div class="input-group-append justify-content-center">
+                                        <button class="btn btn-outline-success" type="button" id="button-addon2">Validate</button>
+                                    </div>
                                       <!-- Button trigger modal -->
-                              <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#modEarth" >
-                                  
-                                  Need infos?
-                                  </button>
+                                        <button type="button" class="btn btn-outline-secondary btn-block" data-toggle="modal" data-target="#modEarth" >
+                                        Need infos?
+                                        </button>
                                   </div>
                                   <app-modal></app-modal>
                           </div>
                       </div>
           </div>
-      </div>
+      
 
       <div class="col-lg-3 col-md-6">
 
@@ -87,7 +85,14 @@
                       <input type="text" class="form-control" placeholder="Enter your answer here" aria-label="Recipient's username" aria-describedby="button-addon2">
                           <div class="input-group-append">
                               <button class="btn btn-outline-success" type="button" id="button-addon2">Validate</button>
-                          </div>
+                              <!-- Button trigger modal -->
+                              <button type="button" class="btn btn-outline-secondary btn-block" data-toggle="modal" data-target="#modEarth" >
+                                  
+                                    Need infos?
+                                    </button>
+                                    </div>
+                                    <app-modal></app-modal>
+                          
                   </div>
               </div>
               </div>
@@ -216,7 +221,7 @@
                                           <h4 class="card-title">Qui suis-je ?</h4>
                                           <p class="card-text">Je suis deux fois plus massive que toutes les planetes </p>
                                           <p class="card-text">Je suis une géante gazeuse</p>
-                                          <p class="card-text">J'ai un gros point rouge à ma surface</p>
+                                          <p class="card-text">J'ai un gros oeil rouge à ma surface</p>
                                       </div>
                               <div class="card-footer justify-content-center">
                                       <!--<label for="answer">Enter your answer</label>-->
