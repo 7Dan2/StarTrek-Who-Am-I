@@ -11,7 +11,7 @@
         <div class="collapse navbar-collapse nav-items-center" id="navbarSupportedContent">
           <ul class="navbar-nav  mx-auto">
                 
-           
+
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -22,11 +22,14 @@
                         
                       </div>
                       <app-modal></app-modal>
+
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> SATELLITES </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
                         <a *ngFor="let satellite of planet.sat | keyvalue" class="dropdown-item" href="#">{{satellite.key}}({{satellite.value}})</a>
+
                         <app-modal></app-modal>
 
                       </div>

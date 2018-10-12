@@ -4,10 +4,15 @@
 
 
 /*Flip Cards*/
+p {
+	width: 18em;
+	height: 3em;
+
+}
 
 /* entire container, keeps perspective */
 .flip-container {
-	perspective: 1000px;
+	perspective: 100em;
 }
 	/* flip the pane when hovered */
 	.flip-container:hover .flipper, .flip-container.hover .flipper {
@@ -15,8 +20,8 @@
 	}
 
 .flip-container, .front, .back {
-	width: 188px;
-	height: 187px;
+	width: 50em;
+	height: 52em;
 }
 
 /* flip speed goes here */
@@ -47,5 +52,3 @@
 .back {
 	transform: rotateY(180deg);
 }
-
-
