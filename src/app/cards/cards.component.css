@@ -1,8 +1,6 @@
 *{
     box-sizing: border-box;
 }
-
-
 /*Flip Cards*/
 
 /* entire container, keeps perspective */
@@ -15,8 +13,8 @@
 	}
 
 .flip-container, .front, .back {
-	width: auto;
-	height: auto;
+	width: 188px;
+	height: 187px;
 }
 
 /* flip speed goes here */
@@ -47,6 +45,47 @@
 .back {
 	transform: rotateY(180deg);
 }
+
+
+
+
+/* Cards */
+.card
+{
+  position: relative;
+}
+.card:before, .card:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 25px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 35px 20px #777;
+  -moz-box-shadow: 0 35px 20px #777;
+  box-shadow: 0 35px 20px #777;
+  -webkit-transform: rotate(-8deg);
+  -moz-transform: rotate(-8deg);
+  -o-transform: rotate(-8deg);
+  -ms-transform: rotate(-8deg);
+  transform: rotate(-8deg);
+}
+.card:after
+{
+  -webkit-transform: rotate(8deg);
+  -moz-transform: rotate(8deg);
+  -o-transform: rotate(8deg);
+  -ms-transform: rotate(8deg);
+  transform: rotate(8deg);
+  right: 10px;
+  left: auto;
+}
+
+
 
 
 
