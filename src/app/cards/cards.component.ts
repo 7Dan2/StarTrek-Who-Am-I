@@ -19,7 +19,7 @@ export class CardsComponent implements OnInit {
             "https://solarsystem.nasa.gov/system/feature_items/images/18_mercury_new.png",
             "https://solarsystem.nasa.gov/system/feature_items/images/27_venus_jg.png",
             "https://solarsystem.nasa.gov/system/feature_items/images/17_earth.png",
-            "https://solarsystem.nasa.gov/system/stellar_items/list_view_images/6_mars_480x320.jpg",
+            "https://solarsystem.nasa.gov/system/feature_items/images/19_mars.png",
             "https://solarsystem.nasa.gov/system/feature_items/images/16_jupiter_new.png",
             "https://solarsystem.nasa.gov/system/feature_items/images/28_saturn.png",
             "https://solarsystem.nasa.gov/system/feature_items/images/29_uranus.png",

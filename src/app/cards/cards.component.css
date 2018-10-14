@@ -87,7 +87,7 @@
 }
 
 .card-body {
-  height: 14em;
+  height: 16em;
   
 }
 .card-body:hover{
@@ -97,5 +97,5 @@
 
 .cards:hover{
   box-shadow: 5px 0px 25px #777, 5px 0px 25px white, 5px 0px 25px #777;
-  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  
   }
