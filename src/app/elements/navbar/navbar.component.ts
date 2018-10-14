@@ -37,7 +37,7 @@ export class NavbarComponent implements OnInit {
    }
 }
   constructor() { 
-    console.log(this.planet.info);
+   
   }
 
 
