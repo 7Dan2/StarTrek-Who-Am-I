@@ -55,39 +55,39 @@ export class CardsComponent implements OnInit {
               ["J'ai un gros point rouge à ma surface"]              
              ],
             "Mercury":  [
-              ["Je suis deux fois plus massive que toutes les planetes"],
-              ["Je suis une géante gazeuse"],
-              ["J'ai un gros point rouge à ma surface"]              
+              ["Mon année dure 88 jours terrestre "],
+              ["Je suis la plus petite planètre du système solaire"],
+              ["Je suis la vedette des auteurs de science fiction"]              
              ],
             "Venus": [
-              ["Je suis deux fois plus massive que toutes les planetes"],
-              ["Je suis une géante gazeuse"],
+              ["Je fais la même taille que la Terre"],
+              ["Ma journée dure une année terrestre"],
               ["J'ai un gros point rouge à ma surface"]              
              ],
             "Saturn": [
               ["Je suis deux fois plus massive que toutes les planetes"],
               ["Je suis une géante gazeuse"],
-              ["J'ai un gros point rouge à ma surface"]              
+              ["Je n'ai ni lune ni anneau"]              
              ],
             "Earth": [
-              ["Je suis deux fois plus massive que toutes les planetes"],
-              ["Je suis une géante gazeuse"],
-              ["J'ai un gros point rouge à ma surface"]              
+              ["On m'appelle la planète bleue."],
+              ["J'ai une atmosphère composée d'oxygène"],
+              ["Je possède de l'eau sous forme liquide"]              
              ],
             "Mars": [
-              ["Je suis deux fois plus massive que toutes les planetes"],
-              ["Je suis une géante gazeuse"],
-              ["J'ai un gros point rouge à ma surface"]              
+              ["Je possède deux lunes"],
+              ["Je suis la 4ème planète du système solaire"],
+              ["On m'appelle la planète rouge"]              
              ],
             "Uranus": [
-              ["Je suis deux fois plus massive que toutes les planetes"],
-              ["Je suis une géante gazeuse"],
-              ["J'ai un gros point rouge à ma surface"]              
+              ["Je possède 27 lunes et 13 anneaux"],
+              ["Je suis la seule planete a tourner sur mon coté"],
+              ["Il n'est pas possible de vivre à ma surface"]              
              ],
             "Neptune": [
-              ["Je suis deux fois plus massive que toutes les planetes"],
-              ["Je suis une géante gazeuse"],
-              ["J'ai un gros point rouge à ma surface"]              
+              ["Voyager 2 est le seul appareil à m'avoir vu de près"],
+              ["J'ai une atmosphère composée de méthane, d'hydrogene et d'helium"],
+              ["Je suis la plus éloignée des planètes"]              
              ],
             
     }
