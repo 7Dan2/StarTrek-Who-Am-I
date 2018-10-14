@@ -2,8 +2,8 @@
      
         <ul class="navbar-nav  my-6">
             <li class="nav-item">
-                <a class="nav-link text-white text-log-top pb-0" href="#">{{appName}}</a>
-                <a class="nav-link text-white text-log-bottom  pt-0" href="#">Project</a>
+                <a class="nav-link text-white text-log-top pb-0" href="#"> Star Trek Who Am I</a>
+               
             </li>
         </ul>
        
@@ -18,7 +18,7 @@
                         PLANET
                       </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a *ngFor="let plan of planet.info | keyvalue" class="dropdown-item"  data-toggle="modal" [attr.data-target]="'#' + plan.key" href="#">{{plan.key}}</a>
+                        <a *ngFor="let name of planetName;let i=index" class="dropdown-item"  data-toggle="modal" [attr.data-target]="'#' + name" href="#">{{name}}</a>
                         
                       </div>
                       <app-modal></app-modal>
@@ -28,7 +28,7 @@
                     <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> SATELLITES </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                        <a *ngFor="let satellite of planet.sat | keyvalue" class="dropdown-item" href="#">{{satellite.key}}({{satellite.value}})</a>
+                        <a *ngFor="let planName of planetName;let i=index" class="dropdown-item" href="#">{{planName}}({{planetSatellite[i]}})</a>
 
                         <app-modal></app-modal>
 
