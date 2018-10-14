@@ -1,18 +1,8 @@
-*{
-    box-sizing: border-box;
-}
-
-
 /*Flip Cards*/
-p {
-	width: 18em;
-	height: 3em;
-
-}
 
 /* entire container, keeps perspective */
 .flip-container {
-	perspective: 100em;
+	perspective: 1000px;
 }
 	/* flip the pane when hovered */
 	.flip-container:hover .flipper, .flip-container.hover .flipper {
@@ -20,8 +10,8 @@ p {
 	}
 
 .flip-container, .front, .back {
-	width: 50em;
-	height: 52em;
+	width: 188px;
+	height: 187px;
 }
 
 /* flip speed goes here */
@@ -52,3 +42,60 @@ p {
 .back {
 	transform: rotateY(180deg);
 }
+
+/* Cards */
+
+.card-body{
+    background-color: whitesmoke;
+}
+
+
+/* Cards */
+.card
+{
+  position: relative;
+}
+.card:before, .card:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 25px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 35px 20px #777;
+  -moz-box-shadow: 0 35px 20px #777;
+  box-shadow: 0 35px 20px #777;
+  -webkit-transform: rotate(-8deg);
+  -moz-transform: rotate(-8deg);
+  -o-transform: rotate(-8deg);
+  -ms-transform: rotate(-8deg);
+  transform: rotate(-8deg);
+}
+.card:after
+{
+  -webkit-transform: rotate(8deg);
+  -moz-transform: rotate(8deg);
+  -o-transform: rotate(8deg);
+  -ms-transform: rotate(8deg);
+  transform: rotate(8deg);
+  right: 10px;
+  left: auto;
+}
+
+.card-body {
+  height: 14em;
+  
+}
+.card-body:hover{
+  background-color: beige;
+
+}
+
+.cards:hover{
+  box-shadow: 5px 0px 25px #777, 5px 0px 25px white, 5px 0px 25px #777;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
