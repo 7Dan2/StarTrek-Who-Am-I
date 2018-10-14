@@ -41,13 +41,13 @@
   
                               <div>
                               <!-- Button trigger modal -->
-                                  <button type="button" class="btn btn-outline-secondary  btn-block" data-toggle="modal" data-target="#modEarth" >
+                                  <button type="button" class="btn btn-outline-secondary  btn-block" data-toggle="modal" [attr.data-target]="'#' + name" >
                                   
                                   Need infos?
                                   </button>
                               </div>
                     </div>
-                            <!-- <app-modal></app-modal> -->
+                             <app-modal></app-modal> 
                         
               </div>
            </div>  

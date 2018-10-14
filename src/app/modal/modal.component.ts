@@ -107,9 +107,9 @@ export class ModalComponent implements OnInit {
     this.planetImage = this.planet.data.image;
     this.planetEnigme = this.planet.data.enigme;
 
-    console.log(this.planetName);
-    console.log(this.planetImage);
-    console.log(this.planetEnigme["Jupiter"]);
+    // console.log(this.planetName);
+    // console.log(this.planetImage);
+    // console.log(this.planetEnigme["Jupiter"]);
    }
 
 
