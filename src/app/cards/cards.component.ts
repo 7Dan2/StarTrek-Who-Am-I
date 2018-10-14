@@ -11,29 +11,7 @@ export class CardsComponent implements OnInit {
   planet:Planet = {
 
      
-    info:
-    { 
-      "Mercury":"https://solarsystem.nasa.gov/system/feature_items/images/18_mercury_new.png" ,
-      "Venus":"https://solarsystem.nasa.gov/system/feature_items/images/27_venus_jg.png",
-      "Earth":"https://solarsystem.nasa.gov/system/feature_items/images/17_earth.png",
-      "Mars":"https://solarsystem.nasa.gov/system/stellar_items/list_view_images/6_mars_480x320.jpg",
-      "Jupiter":"https://solarsystem.nasa.gov/system/feature_items/images/16_jupiter_new.png",
-      "Saturn":"https://solarsystem.nasa.gov/system/feature_items/images/28_saturn.png",
-      "Uranus":"https://solarsystem.nasa.gov/system/feature_items/images/29_uranus.png",
-      "Neptune":"https://solarsystem.nasa.gov/system/feature_items/images/30_neptune.png"
-    },
-
-    sat:{
-
-      "Mercury": 0,
-      "Venus": 0,
-      "Earth": 1,
-      "Mars": 2,
-      "Jupiter": 79,
-      "Saturn": 61,
-      "Uranus": 27,
-      "Neptune": 14
-   },
+  
    data: {
 
     name: ["Mercury","Venus","Earth","Mars","Jupiter","Saturn","Uranus","Neptune"],
@@ -47,6 +25,7 @@ export class CardsComponent implements OnInit {
             "https://solarsystem.nasa.gov/system/feature_items/images/29_uranus.png",
             "https://solarsystem.nasa.gov/system/feature_items/images/30_neptune.png"
     ],
+    satellite : [0,0,1,2,79,61,27,14],
     enigme: {
 
             "Jupiter": [
@@ -100,12 +79,14 @@ export class CardsComponent implements OnInit {
   planetName:string;
   planetImage:string;
   planetEnigme:string;
+  planetSatellite:number;
   
     
   constructor() {
     this.planetName = this.planet.data.name;
     this.planetImage = this.planet.data.image;
     this.planetEnigme = this.planet.data.enigme;
+    this.planetSatellite = this.planet.data.satellite;
 
     // console.log(this.planetName);
     // console.log(this.planetImage);
