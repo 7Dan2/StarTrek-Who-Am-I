@@ -18,7 +18,7 @@
                         PLANET
                       </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a *ngFor="let name of list;let i=index" class="dropdown-item"  data-toggle="modal" [attr.data-target]="'#' + name.name" href="#">{{name.name}}</a>
+                        <a *ngFor="let data of list;let i=index" class="dropdown-item"  data-toggle="modal" [attr.data-target]="'#' + data.name" href="#">{{data.name}}</a>
                         
                       </div>
                       <app-modal></app-modal>
@@ -28,7 +28,7 @@
                     <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> SATELLITES </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                        <a *ngFor="let planName of planetName;let i=index" class="dropdown-item" href="#">{{planName}}({{planetSatellite[i]}})</a>
+                        <a *ngFor="let data of list;let i=index" class="dropdown-item" href="#">{{data.name}}({{data.satellite}})</a>
 
                         <app-modal></app-modal>
 
