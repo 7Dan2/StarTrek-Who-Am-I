@@ -11,6 +11,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { PlanetService } from './services/planet.service';
+import { HttpModule } from '@angular/http';
 
 const appRoutes: Routes = [
   { path: '',component: HomeComponent },
@@ -33,6 +34,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
+    HttpModule,
     RouterModule.forRoot(
       appRoutes
     ),

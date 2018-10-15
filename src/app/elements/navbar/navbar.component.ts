@@ -2,6 +2,7 @@
 import { Planet } from './../../planet';
 import { Component, OnInit } from '@angular/core';
 import { PlanetService } from 'src/app/services/planet.service';
+import { PlanetInfo } from 'src/app/planet-info';
 
 @Component({
   selector: 'app-navbar',
@@ -18,26 +19,19 @@ export class NavbarComponent implements OnInit {
   planetEnigme:string;
   planetSatellite:number;
   
-  planetData = {}
-  constructor(private planetService: PlanetService) {
-    
+  private service:PlanetService;
+  public list:PlanetInfo[];
+  
+  constructor(param_service:PlanetService){
+    this.service = param_service;
+    this.list = [];
 
+  }
 
-    // console.log(this.planetName);
-    // console.log(this.planetImage);
-    // console.log(this.planetEnigme["Jupiter"]);
-   }
-
-
-  ngOnInit() {
-    this.planetData = this.planetService.getPlanetData();
-    
-
-    this.planetName = this.planetData.name;
-    this.planetImage = this.planetData.image;
-    this.planetEnigme = this.planetData.enigme;
-    this.planetSatellite = this.planetData.satellite;
-
+  public ngOnInit():void {
+    //this.list = this.service.getTravels();
+    this.service.getPlanets()
+      .subscribe(resTravelData => this.list = resTravelData);
   }
 
 }
