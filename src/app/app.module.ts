@@ -10,6 +10,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { PlanetService } from './services/planet.service';
 
 const appRoutes: Routes = [
   { path: '',component: HomeComponent },
@@ -36,7 +37,7 @@ const appRoutes: Routes = [
       appRoutes
     ),
   ],
-  providers: [],
+  providers: [PlanetService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
