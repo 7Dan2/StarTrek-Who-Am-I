@@ -10,10 +10,6 @@ import { PlanetInfo } from '../planet-info';
 export class ModalComponent implements OnInit {
 
 
-  planetName:string;
-  planetImage:string;
-  planetEnigme:string;
-  planetSatellite:number;
   
   private service:PlanetService;
   public list:PlanetInfo[];

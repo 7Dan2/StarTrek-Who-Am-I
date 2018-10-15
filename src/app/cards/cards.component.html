@@ -9,19 +9,19 @@
     
     <div class="card-deck">
       
-        <div *ngFor="let name of planetName;let i=index" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+        <div *ngFor="let data of list;let i=index" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
           
             <div class="card cards border-secondary mb-3 w-100">
                 <div>
-                  <img class="card-img-top" src="{{planetImage[i]}}" alt="Jupiter" id="img1" >
+                  <img class="card-img-top" src="{{data.img}}" alt="Jupiter" id="img1" >
                 </div>
                 
                 <div class="card-body ">
                       
                         <h4 class="card-title text-center text-info">Qui suis-je ?</h4>
-                        <p class="card-text">{{planetEnigme[name][0]}}</p>
-                        <p class="card-text">{{planetEnigme[name][1]}}</p>
-                        <p class="card-text">{{planetEnigme[name][2]}}</p>
+                        <p class="card-text">{{data.enigme[0]}}</p>
+                        <p class="card-text">{{data.enigme[1]}}</p>
+                        <p class="card-text">{{data.enigme[2]}}</p>
                       
                 </div> 
                     <div class="card-footer justify-content-center">
@@ -41,7 +41,7 @@
   
                               <div>
                               <!-- Button trigger modal -->
-                                  <button type="button" class="btn btn-outline-secondary  btn-block" data-toggle="modal" [attr.data-target]="'#' + name" >
+                                  <button type="button" class="btn btn-outline-secondary  btn-block" data-toggle="modal" [attr.data-target]="'#' + data.name" >
                                   
                                   Need infos?
                                   </button>

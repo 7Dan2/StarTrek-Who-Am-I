@@ -13,10 +13,7 @@ export class CardsComponent implements OnInit {
  
   
 
-  planetName:string;
-  planetImage:string;
-  planetEnigme:string;
-  planetSatellite:number;
+
   
   private service:PlanetService;
   public list:PlanetInfo[];
