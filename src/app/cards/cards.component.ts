@@ -35,6 +35,7 @@ export class CardsComponent implements OnInit {
   public list:PlanetInfo[];
   
   public tabResponse:string[] = ["Mercury","Venus","Earth","Mars","Jupiter","Saturn","Uranus","Neptune"];
+  public tabInput:string[] = ["","","","","","","","","",""];
   public planetReponse:string;
   constructor(param_service:PlanetService){
     this.service = param_service;
@@ -48,10 +49,10 @@ export class CardsComponent implements OnInit {
       .subscribe(resTravelData => this.list = resTravelData);
       console.log(this.list);
   }
-  onSubmit(planetName:any){
-    console.log(this.planetReponse);
+  onSubmit(planetName:any,userResponse:any){
+    //console.log(this.planetReponse);
     console.log(planetName);
-    if(this.planetReponse == planetName){
+    if(userResponse == planetName){
       this.toggleFlip()
       console.log("YESS");
     }else{
