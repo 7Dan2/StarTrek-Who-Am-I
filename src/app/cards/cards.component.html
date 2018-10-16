@@ -12,9 +12,18 @@
         <div *ngFor="let data of list;let i=index" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
           
             <div class="card cards border-secondary mb-3 w-100">
-                <div>
-                  <img class="card-img-top" src="{{data.img}}" alt="Jupiter" id="img1" >
-                </div>
+                
+                <ngx-flip [flip]=imageState>
+                        <div front>
+                          <img  (click)="turnImage()" class="card-img-top" src="https://uss-theurgy.com/w/images/b/bb/Starfleet_command_emblem.png" alt="" id="img1">
+                        
+                        </div>
+                        <div back>
+                                <img  (click)="turnImage()" class="card-img-top" src="{{data.img}}" alt="Jupiter" id="img1" >
+                        </div>
+                        
+                    </ngx-flip>
+                    
                 
                 <div class="card-body ">
                       
@@ -41,7 +50,7 @@
   
                               <div>
                               <!-- Button trigger modal -->
-                                  <button type="button" class="btn btn-outline-secondary  btn-block" data-toggle="modal" [attr.data-target]="'#' + data.name" >
+                                  <button   type="button" class="btn btn-outline-secondary  btn-block" data-toggle="modal" [attr.data-target]="'#' + data.name" >
                                   
                                   Need infos?
                                   </button>

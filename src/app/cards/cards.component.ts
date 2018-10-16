@@ -14,7 +14,10 @@ export class CardsComponent implements OnInit {
   
 
 
-  
+  imageState:boolean = false;
+  turnImage(){
+    this.imageState = !this.imageState;
+  }
   private service:PlanetService;
   public list:PlanetInfo[];
   
