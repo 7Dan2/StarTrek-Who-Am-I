@@ -14,7 +14,7 @@
             <div class="card cards border-secondary mb-3 w-100">
                     
                         
-                     <div class="tp-box" (click)="toggleFlip()" [@flipState]="flip">
+                     <div class="tp-box" [@flipState]="flip">
                             <div class="tp-box__side tp-box__front">
                               <img class="card-img-top" src="https://uss-theurgy.com/w/images/b/bb/Starfleet_command_emblem.png" alt="" id="img1">
                             
@@ -46,7 +46,7 @@
   
                        
                             <div class="input-group-append">
-                                    <button class="btn btn-outline-success" type="button" id="button-addon2">Validate</button>
+                                    <button (click)="toggleFlip()" class="btn btn-outline-success" type="button" id="button-addon2">Validate</button>
                             </div>   
                               
                           </div>
