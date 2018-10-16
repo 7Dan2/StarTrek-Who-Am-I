@@ -12,17 +12,20 @@
         <div *ngFor="let data of list;let i=index" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
           
             <div class="card cards border-secondary mb-3 w-100">
-                
-                <ngx-flip [flip]=imageState>
-                        <div front>
-                          <img  (click)="turnImage()" class="card-img-top" src="https://uss-theurgy.com/w/images/b/bb/Starfleet_command_emblem.png" alt="" id="img1">
+                    
                         
+                     <div class="tp-box" (click)="toggleFlip()" [@flipState]="flip">
+                            <div class="tp-box__side tp-box__front">
+                              <img class="card-img-top" src="https://uss-theurgy.com/w/images/b/bb/Starfleet_command_emblem.png" alt="" id="img1">
+                            
+                            </div>
+                            <div class="tp-box__side tp-box__back">
+                                    <img  class="card-img-top" src="{{data.img}}" alt="Jupiter" id="img1" >
+                            </div>
+                            
                         </div>
-                        <div back>
-                                <img  (click)="turnImage()" class="card-img-top" src="{{data.img}}" alt="Jupiter" id="img1" >
-                        </div>
-                        
-                    </ngx-flip>
+                  
+                     
                     
                 
                 <div class="card-body ">

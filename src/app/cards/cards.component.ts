@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 import { Planet } from '../planet';
 import { PlanetService } from '../services/planet.service';
 import { PlanetInfo } from '../planet-info';
@@ -6,7 +7,19 @@ import { PlanetInfo } from '../planet-info';
 @Component({
   selector: 'app-cards',
   templateUrl: './cards.component.html',
-  styleUrls: ['./cards.component.css']
+  styleUrls: ['./cards.component.css'],
+  animations: [
+    trigger('flipState', [
+      state('active', style({
+        transform: 'rotateY(179deg)'
+      })),
+      state('inactive', style({
+        transform: 'rotateY(0)'
+      })),
+      transition('active => inactive', animate('500ms ease-out')),
+      transition('inactive => active', animate('500ms ease-in'))
+    ])
+  ]
 })
 export class CardsComponent implements OnInit {
 
@@ -33,5 +46,12 @@ export class CardsComponent implements OnInit {
       .subscribe(resTravelData => this.list = resTravelData);
       console.log(this.list);
   }
+  
+  flip: string = 'inactive';
+
+  toggleFlip() {
+    this.flip = (this.flip == 'inactive') ? 'active' : 'inactive';
+  }
+
 
 }

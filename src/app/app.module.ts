@@ -1,4 +1,5 @@
 import { JumbotronComponent } from './elements/jumbotron/jumbotron.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './pages/home/home.component';
 import { NavbarComponent } from './elements/navbar/navbar.component';
 import { ModalComponent } from './modal/modal.component';
@@ -35,6 +36,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
+    BrowserAnimationsModule,
     FlipModule,
     HttpModule,
     RouterModule.forRoot(
