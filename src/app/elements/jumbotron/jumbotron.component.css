@@ -10,18 +10,19 @@
     align-items: center;
     
 }
-  .btn-primary{
+/*.btn-primary{
     background: #FD3FB3!important;
     border-radius: 0px !important;
   }
 
   .btn{
 
-    background: rgba(253, 63, 180, 0.904)!important;
+   background: rgba(253, 63, 180, 0.904)!important;
     border-radius: 100%;
     padding: 3em;
     
   }
+  */
   .middle-text{
       font-size: 25px;
   }
@@ -43,4 +44,7 @@
       font-size: 18px;
 
 
+  }
+  .lead{
+      border-radius: 20px;
   }
