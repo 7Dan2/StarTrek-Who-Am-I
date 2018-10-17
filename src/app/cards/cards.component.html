@@ -38,7 +38,7 @@
                 </div> 
                     <div class="card-footer justify-content-center">
                      
-                      <div (click)="onSubmit(data.name,tabInput[i],list[i])"class="input-group mb-3">
+                      <div class="input-group mb-3">
                         
                             <input type="text" class="form-control" [(ngModel)]="tabInput[i]" name={{data.name}}  placeholder="Reponse"  aria-label="Recipient's username" aria-describedby="button-addon2">
                               
@@ -46,7 +46,7 @@
   
                        
                             <div class="input-group-append" >
-                                    <button class="btn btn-outline-success" type="button" id="button-addon2">Validate</button>
+                                    <button  (click)="onSubmit(data.name,tabInput[i],list[i])" class="btn btn-outline-success" type="button" id="button-addon2">Validate</button>
                             </div>   
                               
                           </div>
