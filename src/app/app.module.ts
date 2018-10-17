@@ -10,7 +10,6 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FlipModule } from 'ngx-flip';
-
 import { AppComponent } from './app.component';
 import { PlanetService } from './services/planet.service';
 import { HttpModule } from '@angular/http';
@@ -37,7 +36,6 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
-    FlipModule,
     HttpModule,
     RouterModule.forRoot(
       appRoutes
