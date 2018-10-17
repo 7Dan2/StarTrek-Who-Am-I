@@ -49,12 +49,14 @@ export class CardsComponent implements OnInit {
       .subscribe(resTravelData => this.list = resTravelData);
       console.log(this.list);
   }
-  onSubmit(planetName:any,userResponse:any){
-    //console.log(this.planetReponse);
-    console.log(planetName);
-    if(userResponse == planetName){
-      this.toggleFlip()
+  onSubmit(planetName:any,userResponse:any,data:any){ //Data = propriété de List
+    
+    
+    console.log(planetName);// Vrai non en DUR
+    if(userResponse == planetName){ // compare Reponse utilisateur
+      this.toggleFlip(data)
       console.log("YESS");
+      console.log(data.flip + " Prop envoyer en arg");
     }else{
       console.log("NOOO");
     }
@@ -64,9 +66,8 @@ export class CardsComponent implements OnInit {
   }
   flip: string = 'inactive';
 
-  toggleFlip() {
-    
-    this.flip = (this.flip == 'inactive') ? 'active' : 'inactive';
+  toggleFlip(item:any) {
+    item.flip = (item.flip == 'inactive') ? 'active' : 'inactive';
   }
 
 
