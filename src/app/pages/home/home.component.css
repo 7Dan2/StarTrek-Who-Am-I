@@ -1,5 +1,15 @@
 
 /* You can add global styles to this file, and also import other style files */
+* {
+  font-family: 'Kodchasan', sans-serif;
+  text-shadow: 0 0 10px silver, 0 0 20px orange, 0 0 30px blue;
+}
 
-
-
+.comp-body {           
+    background: url("../../../assets/apod.jpg") no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+    
+     
+  }
