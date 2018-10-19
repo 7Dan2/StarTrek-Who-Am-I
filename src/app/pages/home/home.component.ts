@@ -22,20 +22,35 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
    
 
+    
+    
     setTimeout(() => {
-      this.name="https://apod.nasa.gov/apod/image/1801/Arp243_Hubble_3978.jpg";
+      this.name="https://apod.nasa.gov/apod/image/1810/Comet21P_Hemmerich_1440.jpg";
       this.setMyStyles();
     }, 10000);
+   
     setTimeout(() => {
-      this.name="https://apod.nasa.gov/apod/image/1810/PIA22549_fig1.jpg";
+      this.name="https://apod.nasa.gov/apod/image/1810/M015-2_Hubl.jpg";
       this.setMyStyles();
     }, 20000);
+    setTimeout(() => {
+      this.name="https://apod.nasa.gov/apod/image/1810/M16_Klinger_3595.jpg";
+      this.setMyStyles();
+    }, 30000);
+    setTimeout(() => {
+      this.name="https://apod.nasa.gov/apod/image/1810/OrionRedBlue_Lindemann_1500.jpg";
+      this.setMyStyles();
+    }, 40000);
+    setTimeout(() => {
+      this.name="https://apod.nasa.gov/apod/image/1810/NGC1672_Hubble_3600.jpg";
+      this.setMyStyles();
+    }, 50000);
     
 
     setTimeout(() => {
       this.name="../../../assets/apod3.jpg";
       this.setMyStyles();
-    }, 30000);
+    }, 60000 );
 
    
   }
