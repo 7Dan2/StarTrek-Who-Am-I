@@ -7,5 +7,7 @@ export class PlanetInfo {
     public satellite:number = 0;
     public enigme:string[][];
     public flip:string[];
+    public mythsImg:string = "no_img_myths";
+    public mythsDesc:string[]= [];
 }
 

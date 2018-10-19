@@ -44,29 +44,33 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">More infos on {{data.name.toUpperCase()}}</h5>
+        <h5 class="modal-title text-center px-5 mx-5" id="exampleModalLongTitle">A Myth of {{data.name.toUpperCase()}}</h5>
         <button type="button" class="btn btn-outline-secondary close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
         <div class="row">
+          <div class="col">
+            <img class="card-img-top" src="{{data.mythsImg}}" alt="{{data.name}}" id="img1">
+          </div>
          
         <div class="row">
           <div class="col">
-            <h3>Overview</h3>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi, soluta quo ratione corporis iusto sapiente! Commodi totam quasi fuga quidem tempora. Ratione nulla vitae quo at exercitationem saepe repellendus reprehenderit.</p>
+            <h3 class="text-center">Story:</h3>
+          <p>{{data.mythsDesc}}</p>
           </div>
-          <div class="col">
+          <!-- <div class="col">
             <h3>News from {{data.name}}</h3>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem atque alias quas beatae ut eaque vitae sunt velit, qui voluptas. Ipsum rem est nostrum eligendi maxime illo. Nostrum, ea ratione!</p>
-          </div>
+          </div> -->
         </div>
-        <div class="row">
+        <!-- <div class="row">
           <div class="col">
-            <a target="_blank" href="https://solarsystem.nasa.gov/planets/{{data.name.toLowerCase()}}/overview/">Explore more on NASA's website</a> <!-- plan to downcase for link to NASA for the specific planet-->
+            <a target="_blank" href="https://solarsystem.nasa.gov/planets/{{data.name.toLowerCase()}}/overview/">Explore more on NASA's website</a> 
           </div>
-        </div>
+        </div> 
+              -->
       </div>
       <div class="modal-footer justify-content-center">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -75,3 +79,4 @@
     </div>
   </div>
 </div>
+
