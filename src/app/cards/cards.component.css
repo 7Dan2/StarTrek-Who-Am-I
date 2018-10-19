@@ -83,7 +83,7 @@
     position: relative;
     width: 15em;
     height: 10em;
-    margin: 10% 0% 40% 20%;
+    margin: 10% auto 40% auto;
     -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d;
     -webkit-transform         : transform 1s;
