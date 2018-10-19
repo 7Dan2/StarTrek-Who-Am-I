@@ -24,25 +24,32 @@ export class HomeComponent implements OnInit {
 
     
     
-    setTimeout(() => {
-      this.name="https://apod.nasa.gov/apod/image/1810/Comet21P_Hemmerich_1440.jpg";
-      this.setMyStyles();
-    }, 10000);
+   
    
     setTimeout(() => {
-      this.name="https://apod.nasa.gov/apod/image/1810/M015-2_Hubl.jpg";
+      this.name="https://apod.nasa.gov/apod/image/1809/NGC6727-drudis.jpg"; //
+      this.setMyStyles();
+    }, 10000);
+
+    setTimeout(() => {
+      this.name="https://apod.nasa.gov/apod/image/1808/OrionTrapezium_HubbleGendler_4000.jpg"; //
       this.setMyStyles();
     }, 20000);
+
     setTimeout(() => {
-      this.name="https://apod.nasa.gov/apod/image/1810/M16_Klinger_3595.jpg";
+      this.name="https://apod.nasa.gov/apod/image/1808/heic1404b1920.jpg"; //
       this.setMyStyles();
     }, 30000);
+
+
+
     setTimeout(() => {
-      this.name="https://apod.nasa.gov/apod/image/1810/OrionRedBlue_Lindemann_1500.jpg";
+      this.name="https://apod.nasa.gov/apod/image/1810/M16_Klinger_3595.jpg"; 
       this.setMyStyles();
     }, 40000);
+     
     setTimeout(() => {
-      this.name="https://apod.nasa.gov/apod/image/1810/NGC1672_Hubble_3600.jpg";
+      this.name="https://apod.nasa.gov/apod/image/1810/NGC1672_Hubble_3600.jpg"; 
       this.setMyStyles();
     }, 50000);
     
