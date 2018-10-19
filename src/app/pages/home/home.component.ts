@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
       'background-size': 'cover',
       'height': '100%',
       'overflow': 'hidden',
-      'font-family': 'Arial, Helvetica, sans-serif',
+      'font-family': 'Kodchasan , sans-serif', 
     };
     return styles;
   }
