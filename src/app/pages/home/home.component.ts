@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ApodService } from 'src/app/services/apod.service';
+import { ApodData } from 'src/app/apod-data';
 
 @Component({
   selector: 'app-home',
@@ -17,17 +19,23 @@ export class HomeComponent implements OnInit {
     };
     return styles;
   }
-  constructor() { }
+  private service:ApodService;
+  public apod:ApodData;
+  constructor(param_service:ApodService) {
+    this.service = param_service;  
+   }
 
   ngOnInit() {
    
-
+    this.service.getApodData("https://api.nasa.gov/planetary/apod?api_key=YtMgO7UcllSeI94v0IXpgwjBKhVHQem0dnu2xd2w&hd=True&date=2018-08-31")
+    .subscribe(resApodData => this.apod = resApodData);
+  
     
     
    
    
     setTimeout(() => {
-      this.name="https://apod.nasa.gov/apod/image/1809/NGC6727-drudis.jpg"; //
+      this.name= this.apod.hdurl; //"https://apod.nasa.gov/apod/image/1809/NGC6727-drudis.jpg"
       this.setMyStyles();
     }, 10000);
 
