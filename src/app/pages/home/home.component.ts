@@ -20,14 +20,13 @@ export class HomeComponent implements OnInit {
     };
     return styles;
   }
-   
+
  
   private service:ApodService;
   public apod:ApodData[];
- 
   constructor(param_service:ApodService) {
     this.service = param_service;  
-   
+
    }
   
    

@@ -1,4 +1,4 @@
-
+<!-- 
 <body [ngStyle]="setMyStyles()">
     <app-navbar></app-navbar>
     <app-jumbotron>
@@ -7,5 +7,12 @@
     </app-jumbotron>
     <div><iframe src="https://giphy.com/embed/26zyYdiV4pdZZUWEU" width="480" height="181" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/uafairbanks-star-trek-working-26zyYdiV4pdZZUWEU">via GIPHY</a></p></div>
     <iframe src="https://giphy.com/embed/26zyYdiV4pdZZUWEU" width="480" height="181" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/uafairbanks-star-trek-working-26zyYdiV4pdZZUWEU">via GIPHY</a></p>
-  </body>
+  </body> -->
+
+  <ul>
+    <li *ngFor="let data of apod">
+      {{data.hdurl}}
+    </li>
+  </ul>
+  
   
