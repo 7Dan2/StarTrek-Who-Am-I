@@ -68,22 +68,10 @@ export class HomeComponent implements OnInit {
   }, 50000);
 
   setTimeout(() => {
-    this.name = this.apod[5].hdurl;  
+    this.name = "../../../assets/apod3.jpg";
     this.setMyStyles();
   }, 60000);
 
-  setTimeout(() => {
-    this.name = this.apod[7].hdurl;  
-    this.setMyStyles();
-  }, 70000);
-  setTimeout(() => {
-    this.name = this.apod[8].hdurl;  
-    this.setMyStyles();
-  }, 80000);
-  setTimeout(() => {
-    this.name = this.apod[9].hdurl;  
-    this.setMyStyles();
-  }, 90000);
    
    
 }
