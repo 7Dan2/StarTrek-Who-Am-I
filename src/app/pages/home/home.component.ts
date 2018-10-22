@@ -1,3 +1,4 @@
+import { ApodData } from './../../apod-data';
 import { Component, OnInit } from '@angular/core';
 import { ApodService } from 'src/app/services/apod.service';
 import { ApodData } from 'src/app/apod-data';
@@ -9,16 +10,7 @@ import { ApodData } from 'src/app/apod-data';
 })
 export class HomeComponent implements OnInit {
   public name:string ="../../../assets/apod.jpg";
-  setMyStyles() {
-    let styles = {
-      'background': 'url(' + this.name + ') no-repeat center center fixed',
-      'background-size': 'cover',
-      'height': '100%',
-      'overflow': 'hidden',
-      'font-family': 'Kodchasan , sans-serif', 
-    };
-    return styles;
-  }
+   
 
   public apiUrls = [ 
     "https://api.nasa.gov/planetary/apod?api_key=YtMgO7UcllSeI94v0IXpgwjBKhVHQem0dnu2xd2w&hd=True&date=2018-08-10",
@@ -30,30 +22,16 @@ export class HomeComponent implements OnInit {
     "https://api.nasa.gov/planetary/apod?api_key=YtMgO7UcllSeI94v0IXpgwjBKhVHQem0dnu2xd2w&hd=True&date=2018-08-16",
     "https://api.nasa.gov/planetary/apod?api_key=YtMgO7UcllSeI94v0IXpgwjBKhVHQem0dnu2xd2w&hd=True&date=2018-08-17",
     "https://api.nasa.gov/planetary/apod?api_key=YtMgO7UcllSeI94v0IXpgwjBKhVHQem0dnu2xd2w&hd=True&date=2018-08-18",
-    "https://api.nasa.gov/planetary/apod?api_key=YtMgO7UcllSeI94v0IXpgwjBKhVHQem0dnu2xd2w&hd=True&date=2018-08-19",
+    "https://api.nasa.gov/planetary/apod?api_key=YtMgO7UcllSeI94v0IXpgwjBKhVHQem0dnu2xd2w&hd=True&date=2018-08-19"
   ];
-  public promise = Promise.resolve();
   private service:ApodService;
-  public apod:ApodData;
-  public index:number = 0;
-  public interval = 10000;
+  public apod:ApodData[];
+ 
 
-  getApod(index, callback){
-    this.service.getApodData(this.apiUrls[index])
-            .subscribe(resApodData =>  callback(resApodData));
-  }
-
-  setImage(url, callback){
-
-    setTimeout(() => {          
-
-      callback(url.hdurl);
-    }, 10000);
-  }
  
   constructor(param_service:ApodService) {
     this.service = param_service;  
-    
+   
    }
   
    
@@ -61,64 +39,12 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
    
      
-        this.getApod(this.index, (url) => {
-               
-          this.setImage(url, (image) =>{
-
-            this.name= image;
-            console.log(image);
-            this.setMyStyles();
-            this.index += 1;
-          });
-          
-        });
-
-          
-
-       
-            
-          
-       
-      
-     
-   
-
-    // setTimeout(() => {
-      
-    //   this.name= this.apod.hdurl; //"https://apod.nasa.gov/apod/image/1809/NGC6727-drudis.jpg"
-    //   this.setMyStyles();
-    // }, 10000);
-    // setTimeout(() => {
-    //   this.name="https://apod.nasa.gov/apod/image/1808/OrionTrapezium_HubbleGendler_4000.jpg"; //
-    //   this.setMyStyles();
-    // }, 20000);
-
-    // setTimeout(() => {
-    //   this.name="https://apod.nasa.gov/apod/image/1808/heic1404b1920.jpg"; //
-    //   this.setMyStyles();
-    // }, 30000);
-
-
-
-    // setTimeout(() => {
-    //   this.name="https://apod.nasa.gov/apod/image/1810/M16_Klinger_3595.jpg"; 
-    //   this.setMyStyles();
-    // }, 40000);
-     
-    // setTimeout(() => {
-    //   this.name="https://apod.nasa.gov/apod/image/1810/NGC1672_Hubble_3600.jpg"; 
-    //   this.setMyStyles();
-    // }, 50000);
-    
-
-    // setTimeout(() => {
-    //   this.name="../../../assets/apod3.jpg";
-    //   this.setMyStyles();
-    // }, 60000 );
-
-   
-  }
- 
+    this.service.getAll()
+    .subscribe(
+      (apodDatas:ApodData[]) =>  {
+        this.apod = apodDatas;
+      }
+    );
    
     
 }

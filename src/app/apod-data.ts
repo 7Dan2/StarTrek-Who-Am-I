@@ -1,5 +1,5 @@
 export class ApodData {
      
-    hdurl:string = "no_url"
+    hdurl:string = "no_url";
     
 }
