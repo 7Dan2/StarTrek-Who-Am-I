@@ -1,7 +1,7 @@
 import { ApodData } from './../../apod-data';
 import { Component, OnInit } from '@angular/core';
 import { ApodService } from 'src/app/services/apod.service';
-import { ApodData } from 'src/app/apod-data';
+
 
 @Component({
   selector: 'app-home',
@@ -10,6 +10,16 @@ import { ApodData } from 'src/app/apod-data';
 })
 export class HomeComponent implements OnInit {
   public name:string ="../../../assets/apod.jpg";
+  setMyStyles() {
+    let styles = {
+      'background': 'url(' + this.name + ') no-repeat center center fixed',
+      'background-size': 'cover',
+      'height': '100%',
+      'overflow': 'hidden',
+      'font-family': 'Kodchasan , sans-serif', 
+    };
+    return styles;
+  }
    
 
   public apiUrls = [ 
