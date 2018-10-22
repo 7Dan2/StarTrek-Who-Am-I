@@ -26,11 +26,16 @@ export class CardsComponent implements OnInit {
  
   
 
+  myStyles = {
+ 
+    'background-color': '',
+    }
 
   // imageState:boolean = false;
   // turnImage(){
   //   this.imageState = !this.imageState;
   // }
+  public answer:boolean = false;
   private service:PlanetService;
   public list:PlanetInfo[];
   
@@ -51,14 +56,21 @@ export class CardsComponent implements OnInit {
   }
   onSubmit(planetName:any,userResponse:any,data:any){ //Data = propriété de List
     
-    
+   
     console.log(planetName);// Vrai non en DUR
-    if(userResponse == planetName){ // compare Reponse utilisateur
+    if(userResponse == planetName){ 
+      // compare Reponse utilisateur
       this.toggleFlip(data)
+      this.answer = true;
+      this.myStyles["background-color"] = (this.myStyles["background-color"] == '' && this.answer == true) ? 'green' : '';
       console.log("YESS");
+      
       console.log(data.flip + " Prop envoyer en arg");
     }else{
+      this.answer = false;
       console.log("NOOO");
+      this.toggleFlip(data)
+      this.myStyles["background-color"] = (this.myStyles["background-color"] == '' && this.answer == false) ? 'red' : '';
     }
 
     

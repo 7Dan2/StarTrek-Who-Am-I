@@ -19,16 +19,20 @@
                               <img class="card-img-top" src="https://uss-theurgy.com/w/images/b/bb/Starfleet_command_emblem.png" alt="" id="img1">
                             
                             </div>
-                            <div class="tp-box__side tp-box__back">
+                            <div *ngIf=(answer) class="tp-box__side tp-box__back">
                                     <img  class="card-img-top" src="{{data.img}}" alt="Jupiter" id="img1" >
                             </div>
+
+                            <div *ngIf=(!answer) class="tp-box__side tp-box__back">
+                                <img  class="card-img-top" src="http://coolsandfools.com/wp-content/uploads/2015/04/funny-star-trek-18.jpg" alt="Jupiter" id="img1" >
+                        </div>
                             
                         </div>
                   
                      
                     
                 
-                <div class="card-body ">
+                <div class="card-body " [ngStyle]="myStyles">
                       
                         <h4 class="card-title text-center text-info">Qui suis-je ?</h4>
                         <p class="card-text">{{data.enigme[0]}}</p>
