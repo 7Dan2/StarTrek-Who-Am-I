@@ -35,25 +35,49 @@ export class HomeComponent implements OnInit {
   public promise = Promise.resolve();
   private service:ApodService;
   public apod:ApodData;
+  public index:number = 0;
   public interval = 10000;
+
+  getApod(index, callback){
+    this.service.getApodData(this.apiUrls[index])
+            .subscribe(resApodData =>  callback(resApodData));
+  }
+
+  setImage(url, callback){
+
+    setTimeout(() => {          
+
+      callback(url.hdurl);
+    }, 10000);
+  }
+ 
   constructor(param_service:ApodService) {
     this.service = param_service;  
     
    }
-
+  
+   
+  
   ngOnInit() {
    
      
-      this.apiUrls.forEach( (url, index) => {
-        this.service.getApodData(url)
-        .subscribe(resApodData => this.apod = resApodData);
-        
-       setTimeout(() => {
+        this.getApod(this.index, (url) => {
+               
+          this.setImage(url, (image) =>{
+
+            this.name= image;
+            console.log(image);
+            this.setMyStyles();
+            this.index += 1;
+          });
+          
+        });
+
+          
+
        
-        this.name= this.apod.hdurl;
-        this.setMyStyles();
-       }, 1000);
-      })
+            
+          
        
       
      
@@ -94,5 +118,10 @@ export class HomeComponent implements OnInit {
 
    
   }
+ 
+   
+    
+}
 
+ 
 }
