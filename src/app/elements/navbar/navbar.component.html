@@ -5,8 +5,10 @@
         
         <a class="navbar-brand text-white" href="#">
             <img src="./src/app/cards/assets/star-trek-badge/star-trek-badge-48-203991.png" class="d-inline-block" alt="Starfleet">
-            Star Trek Who Am I
-          </a>
+            
+            <img src="https://mbtskoudsalg.com/images/star-trek-logo-png-4.png" alt="Startrek Logo" id="startrekLogo"><span style="color: orange">Who Am I</span>
+        </a>
+          
         
             <!--<ul class="navbar-nav  my-6">
                 <li class="nav-item">
@@ -22,31 +24,32 @@
     
     
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle text-white" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             PLANETS
                           </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a *ngFor="let data of list;let i=index" class="dropdown-item"  data-toggle="modal" [attr.data-target]="'#' + data.name" href="#">{{data.name}}</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="planets">
+                            <a *ngFor="let data of list;let i=index" class="dropdown-item text-white" id="menus"  data-toggle="modal" [attr.data-target]="'#' + data.name" href="#">{{data.name}}</a>
                             
                           </div>
                           <app-modal></app-modal>
     
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> MOONS </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                             MOONS </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="moons">
     
-                            <a *ngFor="let data of list;let i=index" class="dropdown-item" href="#">{{data.name}}({{data.satellite}})</a>
+                            <a *ngFor="let data of list;let i=index" class="dropdown-item text-white" id="menus" href="#">{{data.name}}({{data.satellite}})</a>
     
                             <app-modal></app-modal>
     
                           </div>
                           <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                MYTHS
+                                MYTHS AND LEGENDS
                               </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a *ngFor="let data of list;let i=index" class="dropdown-item"  data-toggle="modal" [attr.data-target]="'#' + data.name + '1'" href="#">{{data.name}}</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="myths">
+                                <a *ngFor="let data of list;let i=index" class="dropdown-item text-white" id="menus" data-toggle="modal" [attr.data-target]="'#' + data.name + '1'" href="#">{{data.name}}</a>
                                 
                               </div>
                               <app-modal></app-modal>
