@@ -1,16 +1,15 @@
-import { Planet } from './../planet';
 import { Component, OnInit } from '@angular/core';
 import { PlanetService } from '../services/planet.service';
 import { PlanetInfo } from '../planet-info';
+import { Planet } from './../planet';
+
 @Component({
-  selector: 'app-modal',
-  templateUrl: './modal.component.html',
-  styleUrls: ['./modal.component.css']
+  selector: 'app-modalsnd',
+  templateUrl: './modalsnd.component.html',
+  styleUrls: ['./modalsnd.component.css']
 })
-export class ModalComponent implements OnInit {
+export class ModalsndComponent implements OnInit {
 
-
-   
   private service:PlanetService;
   public list:PlanetInfo[];
   
@@ -25,5 +24,4 @@ export class ModalComponent implements OnInit {
     this.service.getPlanets()
       .subscribe(resTravelData => this.list = resTravelData);
   }
-
 }

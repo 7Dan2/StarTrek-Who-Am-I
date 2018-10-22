@@ -1,47 +1,68 @@
-<nav class="navbar navbar-expand-lg navbar-light">
-     
-        <ul class="navbar-nav  my-6">
-            <li class="nav-item">
-                <a class="nav-link text-white text-log-top pb-0" href="#"> Star Trek Who Am I</a>
-               
-            </li>
-        </ul>
-       
+<div class="container-fluid">
+
+
+    <nav class="navbar navbar-expand-lg navbar-light rounded" style="background:linear-gradient(rgba(192, 192, 192, 0.8), rgba(255, 166, 0, 0.8))">
         
-        <div class="collapse navbar-collapse nav-items-center" id="navbarSupportedContent">
-          <ul class="navbar-nav  mx-auto">
-                
-
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        PLANET
-                      </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a *ngFor="let plan of planet.info | keyvalue" class="dropdown-item"  data-toggle="modal" [attr.data-target]="'#' + plan.key" href="#">{{plan.key}}</a>
-                        
-                      </div>
-                      <app-modal></app-modal>
-
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> SATELLITES </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-
-                        <a *ngFor="let satellite of planet.sat | keyvalue" class="dropdown-item" href="#">{{satellite.key}}({{satellite.value}})</a>
-
-                        <app-modal></app-modal>
-
-                      </div>
-                </li>
+        <a class="navbar-brand text-white" href="#">
+            <img src="./src/app/cards/assets/star-trek-badge/star-trek-badge-48-203991.png" class="d-inline-block" alt="Starfleet">
+            <img src="https://vignette.wikia.nocookie.net/family-guy-em-portgues/images/2/25/STL.png/revision/latest?cb=20160401211047&path-prefix=pt-br" class="d-inline-block salutoss" alt="Starfleet">
+             <span class="toto">Who Am I</span>
+          </a>
+        
+            <!--<ul class="navbar-nav  my-6">
                 <li class="nav-item">
-                    <a class="nav-link text-white " href="#">MYTHS</a>
+                    <a class="nav-link text-white text-log-top pb-0" href="#"> Star Trek Who Am I</a>
+                   
                 </li>
+            </ul>-->
+           
             
-          </ul>
-        </div>
-       
+            <div class="collapse navbar-collapse justify-content-around jdg" id="navbarSupportedContent">
+              <ul class="navbar-nav row ">
+                    
+                <li class="nav-item">
+                    <a class="nav-link  text-white" id="navbar" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="momo">NEED INFORMATIONS ?</span>
+                      </a>
+                    
     
-  </nav>
-
-  
+                    <li class="nav-item dropdown astro">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="momo">PLANETS</span>
+                          </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a *ngFor="let data of list;let i=index" class="dropdown-item"  data-toggle="modal" [attr.data-target]="'#' + data.name" href="#">{{data.name}}</a>
+                            
+                          </div>
+                          <app-modal></app-modal>
+    
+                    </li>
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="momo">MOONS</span> </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    
+                            <a *ngFor="let data of list;let i=index" class="dropdown-item" href="#">{{data.name}}({{data.satellite}})</a>
+    
+                            <app-modal></app-modal> -->
+    
+                          <!-- </div> -->
+                          <li class="nav-item dropdown astro">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="momo">MYTHS</span>
+                              </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a *ngFor="let data of list;let i=index" class="dropdown-item"  data-toggle="modal" [attr.data-target]="'#' + data.name + '1'" href="#">{{data.name}}</a>
+                                
+                              </div>
+                              <app-modal></app-modal>
+        
+                        </li>
+                
+              </ul>
+            </div>
+           
+        
+      </nav>
+    
+    </div>
+      

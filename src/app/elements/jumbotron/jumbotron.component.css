@@ -48,14 +48,16 @@
   .lead{
       border-radius: 20px;
 }
+.SLG{
+    margin-top:5em;
+}
 
-  .jpp {
+.jpp {
       position: relative;
       margin : 0em 0em -2.8em 0em;
       font-size: 3em;
       color: white;
 }
-/* .stwia{
-    position:relative;
-    margin:0em 0em 0em 0em;
-} */
+.str{
+    border-radius: 5em;
+}
