@@ -33,20 +33,59 @@ export class HomeComponent implements OnInit {
   
   ngOnInit() {
    
-    console.log(this.apod) //1
+     
 
     this.service.getAll()
     .subscribe(
-      (apodDatas:ApodData[]) =>  { //3
+      (apodDatas:ApodData[]) =>  {  
         this.apod = apodDatas;
       }
     );
    
   setTimeout(() => {
-    console.log(this.apod) //4
+    this.name = this.apod[0].hdurl;  
+    this.setMyStyles();
   }, 10000);
 
-   console.log(this.apod)//2
+  setTimeout(() => {
+    this.name = this.apod[1].hdurl;  
+    this.setMyStyles();
+  }, 20000);
+
+  setTimeout(() => {
+    this.name = this.apod[2].hdurl;  
+    this.setMyStyles();
+  }, 30000);
+
+  setTimeout(() => {
+    this.name = this.apod[3].hdurl;  
+    this.setMyStyles();
+  }, 40000);
+
+  setTimeout(() => {
+    this.name = this.apod[4].hdurl;  
+    this.setMyStyles();
+  }, 50000);
+
+  setTimeout(() => {
+    this.name = this.apod[5].hdurl;  
+    this.setMyStyles();
+  }, 60000);
+
+  setTimeout(() => {
+    this.name = this.apod[7].hdurl;  
+    this.setMyStyles();
+  }, 70000);
+  setTimeout(() => {
+    this.name = this.apod[8].hdurl;  
+    this.setMyStyles();
+  }, 80000);
+  setTimeout(() => {
+    this.name = this.apod[9].hdurl;  
+    this.setMyStyles();
+  }, 90000);
+   
+   
 }
 
  
