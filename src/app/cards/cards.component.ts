@@ -26,10 +26,7 @@ export class CardsComponent implements OnInit {
  
   
 
-  myStyles = {
  
-    'background-color': '',
-    }
 
   // imageState:boolean = false;
   // turnImage(){
@@ -58,11 +55,11 @@ export class CardsComponent implements OnInit {
     
    
     console.log(planetName);// Vrai non en DUR
-    if(userResponse == planetName){ 
+    if(userResponse.toLowerCase() == planetName.toLowerCase()){ 
       // compare Reponse utilisateur
       this.toggleFlip(data)
       this.answer = true;
-      this.myStyles["background-color"] = (this.myStyles["background-color"] == '' && this.answer == true) ? 'green' : '';
+       
       console.log("YESS");
       
       console.log(data.flip + " Prop envoyer en arg");
@@ -70,7 +67,7 @@ export class CardsComponent implements OnInit {
       this.answer = false;
       console.log("NOOO");
       this.toggleFlip(data)
-      this.myStyles["background-color"] = (this.myStyles["background-color"] == '' && this.answer == false) ? 'red' : '';
+      
     }
 
     

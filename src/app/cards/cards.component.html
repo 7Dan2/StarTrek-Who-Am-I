@@ -21,10 +21,12 @@
                             </div>
                             <div *ngIf=(answer) class="tp-box__side tp-box__back">
                                     <img  class="card-img-top" src="{{data.img}}" alt="Jupiter" id="img1" >
+                                    <h1 class="text-center" style="color: green">BRAVO!</h1>
                             </div>
 
                             <div *ngIf=(!answer) class="tp-box__side tp-box__back">
                                 <img  class="card-img-top" src="http://coolsandfools.com/wp-content/uploads/2015/04/funny-star-trek-18.jpg" alt="Jupiter" id="img1" >
+                                <h1 class="text-center" style="color: red">TRY AGAIN</h1>
                         </div>
                             
                         </div>
@@ -32,7 +34,7 @@
                      
                     
                 
-                <div class="card-body " [ngStyle]="myStyles">
+                <div class="card-body ">
                       
                         <h4 class="card-title text-center text-info">Qui suis-je ?</h4>
                         <p class="card-text">{{data.enigme[0]}}</p>
