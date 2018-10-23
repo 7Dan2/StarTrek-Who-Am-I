@@ -19,15 +19,12 @@
 
 #menus:hover{
     background-color: rgba(167, 242, 255, 0.9);
+    
 }
 #startrekLogo {
     height: 3em;
     width: 12em;
 
-}
-.salutoss{
-    height:3em;
-    width:12em;
 }
 .jdg{
     margin-right: 15%;
@@ -41,7 +38,7 @@
     font-weight: bold;
 }
 .momo{
-    color:white;
+     color:white;
     font-size: 1.5em;
 }
 .astro{
@@ -55,5 +52,5 @@
 }
 li.dropdown:hover .dropdown-menu {
     display: block;
-}
+} 
 
