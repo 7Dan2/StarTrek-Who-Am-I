@@ -2,7 +2,7 @@
 /* You can add global styles to this file, and also import other style files */
 * {
   font-family: 'Kodchasan', sans-serif;
- 
+  
 }
 
 .comp-body {           
@@ -11,5 +11,12 @@
     height: 100%;
     overflow: hidden;
     
+    
      
   }
+
+.iframe{
+  border-radius: 30px;
+  border: 5px solid red;
+  background-color: red;
+}

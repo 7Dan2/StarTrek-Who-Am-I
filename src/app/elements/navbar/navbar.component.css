@@ -1,3 +1,32 @@
 *{
     font-family: 'Kodchasan', sans-serif;
+    
+}
+
+#planets{
+    text-align: center;
+    background: linear-gradient(rgba(255, 166, 0, 0.9), rgb(255, 205, 113),  rgba(192, 192, 192), rgb(130, 224, 255));
+    box-shadow: 5px 5px 10px white, 0px 10px 10px lightslategray;
+
+}
+#moons{
+    text-align: center;
+    background: linear-gradient(rgba(255, 166, 0, 0.9), rgb(255, 205, 113),  rgba(192, 192, 192), rgb(130, 224, 255));
+    box-shadow: 5px 5px 10px white, 0px 10px 10px lightslategray;
+}
+
+#myths{
+    text-align: center;
+    background: linear-gradient(rgba(255, 166, 0, 0.9), rgb(255, 205, 113),  rgba(192, 192, 192), rgb(130, 224, 255));
+    box-shadow: 5px 5px 10px white, 0px 10px 10px lightslategray;
+
+}
+
+#menus:hover{
+    background-color: rgba(167, 242, 255, 0.9);
+}
+#startrekLogo {
+    height: 3em;
+    width: 12em;
+
 }
