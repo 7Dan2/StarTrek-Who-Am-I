@@ -63,7 +63,7 @@ export class CardsComponent implements OnInit {
       console.log("YESS");
       
       console.log(data.flip + " Prop envoyer en arg");
-    }else{
+    }else if(userResponse.toLowerCase() != ''){
       this.answer = false;
       console.log("NOOO");
       this.toggleFlip(data)
