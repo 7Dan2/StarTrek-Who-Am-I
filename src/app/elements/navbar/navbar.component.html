@@ -5,7 +5,7 @@
         
         <a class="navbar-brand text-white" href="#">
             <img src="./src/app/cards/assets/star-trek-badge/star-trek-badge-48-203991.png" class="d-inline-block" alt="Starfleet">
-            <img src="https://vignette.wikia.nocookie.net/family-guy-em-portgues/images/2/25/STL.png/revision/latest?cb=20160401211047&path-prefix=pt-br" class="d-inline-block salutoss" alt="Starfleet">
+            <img src="https://vignette.wikia.nocookie.net/family-guy-em-portgues/images/2/25/STL.png/revision/latest?cb=20160401211047&path-prefix=pt-br" class="d-inline-block" id="startrekLogo" alt="Starfleet">
              <span class="toto">Who Am I</span>
           </a>
         
@@ -31,7 +31,7 @@
                             <span class="momo">PLANETS</span>
                           </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="planets">
-                            <a *ngFor="let data of list;let i=index" class="dropdown-item"  data-toggle="modal" [attr.data-target]="'#' + data.name" href="#">{{data.name}}</a>
+                            <a *ngFor="let data of list;let i=index" class="dropdown-item text-white" id="menus" data-toggle="modal" [attr.data-target]="'#' + data.name" href="#" >{{data.name}} </a>
                             
                           </div>
                           <app-modal></app-modal>
@@ -51,7 +51,7 @@
                                 <span class="momo">MYTHS</span>
                               </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="myths">
-                                <a *ngFor="let data of list;let i=index" class="dropdown-item"  data-toggle="modal" [attr.data-target]="'#' + data.name + '1'" href="#">{{data.name}}</a>
+                                <a *ngFor="let data of list;let i=index" class="dropdown-item text-white" id="menus" data-toggle="modal" [attr.data-target]="'#' + data.name + '1'" href="#">{{data.name}}</a>
                                 
                               </div>
                               <app-modal></app-modal>
