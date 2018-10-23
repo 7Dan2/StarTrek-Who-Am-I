@@ -1,5 +1,5 @@
 <div class="container-fluid">
-
+<app-navbar></app-navbar>
     <!-- ######### Empty row ######### -->
     <div class="row  w-50 p-3"></div>
   
@@ -9,45 +9,63 @@
     
     <div class="card-deck">
       
-        <div class="col-lg-3 col-md-6">
+        <div *ngFor="let data of list;let i=index" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
           
-            <div class="card shadow border-secondary mb-3 w-100">
-                <div>
-                  <img class="card-img-top" src="https://solarsystem.nasa.gov/system/feature_items/images/16_jupiter_new.png" alt="Jupiter" id="img1" >
-                </div>
+            <div class="card cards border-secondary mb-3 w-100">
+                    
+                        
+                     <div class="tp-box" [@flipState]="data.flip">
+                            <div class="tp-box__side tp-box__front">
+                              <img class="card-img-top" src="https://uss-theurgy.com/w/images/b/bb/Starfleet_command_emblem.png" alt="" id="img1">
+                            
+                            </div>
+                            <div *ngIf=(answer) class="tp-box__side tp-box__back">
+                                    <img  class="card-img-top" src="{{data.img}}" alt="Jupiter" id="img1" >
+                                    <h1 class="text-center" style="color: green">BRAVO!</h1>
+                            </div>
+
+                            <div *ngIf=(!answer) class="tp-box__side tp-box__back">
+                                <img  class="card-img-top" src="http://coolsandfools.com/wp-content/uploads/2015/04/funny-star-trek-18.jpg" alt="Jupiter" id="img1" >
+                                <h1 class="text-center" style="color: red">TRY AGAIN</h1>
+                        </div>
+                            
+                        </div>
+                  
+                     
+                    
                 
                 <div class="card-body ">
                       
-                        <h4 class="card-title text-info">Qui suis-je ?</h4>
-                        <p class="card-text">Je suis deux fois plus massive que toutes les planetes réunies. </p>
-                        <p class="card-text">Je suis une géante gazeuse</p>
-                        <p class="card-text">J'ai une grosse tâche rouge à ma surface</p> 
+                        <h4 class="card-title text-center text-info">Qui suis-je ?</h4>
+                        <p class="card-text">{{data.enigme[0]}}</p>
+                        <p class="card-text">{{data.enigme[1]}}</p>
+                        <p class="card-text">{{data.enigme[2]}}</p>
                       
                 </div> 
                     <div class="card-footer justify-content-center">
                      
                       <div class="input-group mb-3">
                         
-                            <input type="text" class="form-control" placeholder="Enter your answer here" aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <input type="text" class="form-control" [(ngModel)]="tabInput[i]" name={{data.name}}  placeholder="Reponse"  aria-label="Recipient's username" aria-describedby="button-addon2">
                               
                         
   
                        
-                            <div class="input-group-append">
-                                    <button class="btn btn-outline-success" type="button" id="button-addon2">Validate</button>
+                            <div class="input-group-append" >
+                                    <button  (click)="onSubmit(data.name,tabInput[i],list[i])" class="btn btn-outline-success" type="button" id="button-addon2">Validate</button>
                             </div>   
                               
                           </div>
   
                               <div>
                               <!-- Button trigger modal -->
-                                  <button type="button" class="btn btn-outline-secondary grosso" data-toggle="modal" data-target="#modEarth" >
+                                  <button   type="button" class="btn btn-outline-secondary  btn-block" data-toggle="modal" [attr.data-target]="'#' + data.name" >
                                   
                                   Need infos?
                                   </button>
                               </div>
                     </div>
-                            <app-modal></app-modal>
+                             <app-modal></app-modal> 
                         
               </div>
            </div>  
@@ -55,400 +73,9 @@
       
       
       
-        <div class="col-lg-3 col-md-6">
-          
-            <div class="card shadow border-secondary mb-3 w-100">
-                    <img class="card-img-top max-width: 100%" src="https://solarsystem.nasa.gov/system/feature_items/images/17_earth.png" alt="Earth">
-                        <div class="card-body">
-                            <h4 class="card-title text-info">Qui suis-je ?</h4>
-                            <p class="card-text">On m'appelle la planète bleue.</p>
-                            <p class="card-text">J'ai une atmosphère composée d'oxygène</p>
-                            <p class="card-text">Je possède de l'eau sous forme liquide</p>
-                        </div>
-                        <div class="card-footer justify-content-center">
-  
+        
                             
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="Enter your answer here" aria-label="Recipient's username" aria-describedby="button-addon2">
-                                    <div class="input-group-append justify-content-center">
-                                        <button class="btn btn-outline-success" type="button" id="button-addon2">Validate</button>
-                                 
-                                    </div>
-                           </div>
-                                    <div>
-                                      <!-- Button trigger modal -->
-                                          <button type="button" class="btn btn-outline-secondary grosso" data-toggle="modal" data-target="#modEarth" >
-                                          
-                                          Need infos?
-                                          </button>
-                                    </div>
-                                    
-                                      <app-modal></app-modal>
-                                    
-                            
-                        </div>
-            </div>
-        </div>
-      
-        <div class="col-lg-3 col-md-6">
-  
-            <div class="card shadow border-secondary mb-3 w-100">
-                    <img class="card-img-top max-width: 100%" src="https://solarsystem.nasa.gov/system/feature_items/images/28_saturn.png" alt="Saturn">
-                        <div class="card-body">
-                            <h4 class="card-title text-info">Qui suis-je ?</h4>
-                            <p class="card-text">Je possède des anneaux composés de glace </p>
-                            <p class="card-text">Je suis une géante gazeuse</p>
-                            <p class="card-text">Mes journées durent 10 heures terrestre</p>
-                        </div>
-                <div class="card-footer justify-content-center">
-                        <!--<label for="answer">Enter your answer</label>-->
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Enter your answer here" aria-label="Recipient's username" aria-describedby="button-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-outline-success" type="button" id="button-addon2">Validate</button>
-                            </div>
-                                
-                               
-                    </div>
-                    <div>
-                      <!-- Button trigger modal -->
-                          <button type="button" class="btn btn-outline-secondary grosso" data-toggle="modal" data-target="#modEarth" >
-                          
-                          Need infos?
-                          </button>
-                      </div>
-                </div>
-                </div>
-                </div>
-  
-                <div class="col-lg-3 col-md-6">
-  
-                <div class="card shadow border-secondary mb-3 w-100">
-                        <img class="card-img-top max-width: 100%" src="https://solarsystem.nasa.gov/system/feature_items/images/18_mercury_new.png" alt="Mercure">
-                            <div class="card-body">
-                                <h4 class="card-title text-info">Qui suis-je ?</h4>
-                                <p class="card-text">Mon année dure 88 jours terrestre </p>
-                                <p class="card-text">Je suis la plus petite planètre du système solaire</p>
-                                <p class="card-text">Je suis la vedette des auteurs de science fiction</p>
-                            </div>
-                    <div class="card-footer justify-content-center">
-                           <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Enter your answer here" aria-label="Recipient's username" aria-describedby="button-addon2">
-                                <div class="input-group-append">
-                                    <button class="btn btn-outline-success" type="button" id="button-addon2">Validate</button>
-                                </div>
-                              </div>        
-                                <div>
-                                  <!-- Button trigger modal -->
-                                      <button type="button" class="btn btn-outline-secondary grosso" data-toggle="modal" data-target="#modEarth" >
-                                      
-                                      Need infos?
-                                      </button>
-                                  </div>
-                        </div>
-                    
-                    </div>
-                    </div>
-  
-                    
-                </div>
-            </div>
-  
-                    <!-- ######### Empty row ######## -->
-                    <div class="row  w-50 p-3">
-                        
-                    </div> 
-  
-                     <!-- ######## second row ######### -->
-                    <div class="row ">
-  
-                        <div class="card-deck">
-                            <div class="col-lg-3">
-  
-                            <div class="card shadow border-secondary mb-3 w-100">
-                                <img class="card-img-top max-width: 100%" src="https://solarsystem.nasa.gov/system/feature_items/images/27_venus_jg.png" alt="Venus">
-                                    <div class="card-body">
-                                        <h4 class="card-title text-info">Qui suis-je ?</h4>
-                                        <p class="card-text">On m'appelle la planète bleue</p>
-                                        <p class="card-text">J'ai une atmosphère composée d'oxygène</p>
-                                        <p class="card-text">Je possède de l'eau sous forme liquide</p>
-                                    </div>
-                            <div class="card-footer justify-content-center">
-                                    <label for="answer">Enter your answer</label>
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Enter your answer here" aria-label="Recipient's username" aria-describedby="button-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-outline-success" type="button" id="button-addon2">Validate</button>
-                                        </div>
-                                </div>
-                                <div>
-                                  <!-- Button trigger modal -->
-                                      <button type="button" class="btn btn-outline-secondary grosso" data-toggle="modal" data-target="#modEarth" >
-                                      
-                                      Need infos?
-                                      </button>
-                                  </div>
-                              
-                            </div>
-                            </div>
-                        </div>
-  
-                        <div class="col-lg-3">
-                            <div class="card shadow border-secondary mb-3 w-100">
-                                    <img class="card-img-top max-width: 100%" src="https://solarsystem.nasa.gov/system/feature_items/images/30_neptune.png" alt="Neptune"/>
-                                   
-                                        <div class="card-body">
-                                            <h4 class="card-title text-info">Qui suis-je ?</h4>
-                                            <p class="card-text">On m'appelle la planète bleue</p>
-                                            <p class="card-text">J'ai une atmosphère composée d'oxygène</p>
-                                            <p class="card-text">Je possède de l'eau sous forme liquide</p>
-                                        </div>
-                                <div class="card-footer justify-content-center">
-                                        <label for="answer">Enter your answer</label>
-                                    <div class="input-group mb-3">
-                                        <input type="text" class="form-control" placeholder="Enter your answer here" aria-label="Recipient's username" aria-describedby="button-addon2">
-                                            <div class="input-group-append">
-                                                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Validate</button>
-                                            </div>
-                                    </div>
-                                    <div>
-                                      <!-- Button trigger modal -->
-                                          <button type="button" class="btn btn-outline-secondary grosso" data-toggle="modal" data-target="#modEarth" >
-                                          
-                                          Need infos?
-                                          </button>
-                                      </div>
-                                </div>
-                                </div>
-                            </div>
-  
-                                <div class="col-lg-3">
-                                <div class="card shadow border-secondary mb-3 w-100">
-                                        <img class="card-img-top max-width: 100%" src="https://solarsystem.nasa.gov/system/feature_items/images/29_uranus.png" alt="Uranus">
-                                            <div class="card-body">
-                                                <h4 class="card-title text-info">Qui suis-je ?</h4>
-                                                <p class="card-text">On m'appelle la planète bleue</p>
-                                                <p class="card-text">J'ai une atmosphère composée d'oxygène</p>
-                                                <p class="card-text">Je possède de l'eau sous forme liquide</p>
-                                            </div>
-                                    <div class="card-footer justify-content-center">
-                                            <label for="answer">Enter your answer</label>
-                                        <div class="input-group mb-3">
-                                            <input type="text" class="form-control" placeholder="Enter your answer here" aria-label="Recipient's username" aria-describedby="button-addon2">
-                                                <div class="input-group-append">
-                                                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Validate</button>
-                                                </div>
-                                        </div>
-                                        <div>
-                                          <!-- Button trigger modal -->
-                                              <button type="button" class="btn btn-outline-secondary grosso" data-toggle="modal" data-target="#modEarth" >
-                                              
-                                              Need infos?
-                                              </button>
-                                          </div>
-                                    </div>
-                                    </div>
-                                </div>
-  
-                                
-  
-                                    <div class="col-lg-3">
-                                        <div class="card shadow border-secondary mb-3 w-100">
-                                            <img class="card-img-top max-width: 100%" src="https://solarsystem.nasa.gov/system/feature_items/images/31_earth_moon.png" alt="Earth's moon">
-                                                <div class="card-body">
-                                                    <h4 class="card-title">Qui suis-je ?</h4>
-                                                    <p class="card-text">J'ai eu 24 visiteurs</p>
-                                                    <p class="card-text">Je suis entouré d'une exosphère qui n'est pas respirable</p>
-                                                    <p class="card-text">Je stabilise les oscillation de la planète qui m'accompagne</p>
-                                                </div>
-                                        <div class="card-footer justify-content-center">
-                                                <label for="answer">Enter your answer</label>
-                                            <div class="input-group mb-3">
-                                                <input type="text" class="form-control" placeholder="Enter your answer here" aria-label="Recipient's username" aria-describedby="button-addon2">
-                                                    <div class="input-group-append">
-                                                        <button class="btn btn-outline-success" type="button" id="button-addon2">Validate</button>
-                                                    </div>
-                                            </div>
-                                            <div>
-                                              <!-- Button trigger modal -->
-                                                  <button type="button" class="btn btn-outline-secondary grosso" data-toggle="modal" data-target="#modEarth" >
-                                                  
-                                                  Need infos?
-                                                  </button>
-                                              </div>
-                                        </div>
-                                        </div>
-                                        </div>
-  
-                                </div>
-                            </div>
-                            
-                            
-                    <!-- ######### Empty row ######### -->
-                    <div class="row  w-50 p-3"></div>
-  
-                    <!-- ######### Third row ######### -->
-  
-                    <div class="row">
-                            <div class="card-deck">
-  
-                                <div class="col-lg-3">
-                                
-                                <div class="card shadow border-secondary mb-3 w-100">
-                                    <img class="card-img-top max-width: 100%" src="https://solarsystem.nasa.gov/system/feature_items/images/16_jupiter_new.png" alt="Jupiter">
-                                        <div class="card-body">
-                                            <h4 class="card-title">Qui suis-je ?</h4>
-                                            <p class="card-text">Je suis deux fois plus massive que toutes les planetes </p>
-                                            <p class="card-text">Je suis une géante gazeuse</p>
-                                            <p class="card-text">J'ai un gros point rouge à ma surface</p>
-                                        </div>
-                                <div class="card-footer justify-content-center">
-                                        <label for="answer">Enter your answer</label>
-                                    <div class="input-group mb-3">
-                                        <input type="text" class="form-control" placeholder="Enter your answer here" aria-label="Recipient's username" aria-describedby="button-addon2">
-                                            <div class="input-group-append">
-                                                <button class="btn btn-outline-success" type="button" id="button-addon2">Validate</button>
-                                            </div>
-                                    </div>
-                                    <div>
-                                      <!-- Button trigger modal -->
-                                          <button type="button" class="btn btn-outline-secondary grosso" data-toggle="modal" data-target="#modEarth" >
-                                          
-                                          Need infos?
-                                          </button>
-                                      </div>
-                                </div>
-                                </div>
-                            </div>
-  
-                            <div class="col-lg-3">
-                                <div class="card shadow border-secondary mb-3 w-100">
-                                        <img class="card-img-top max-width: 100%" src="https://solarsystem.nasa.gov/system/feature_items/images/17_earth.png" alt="Earth">
-                                            <div class="card-body">
-                                                <h4 class="card-title">Qui suis-je ?</h4>
-                                                <p class="card-text">On m'appelle la planète bleue</p>
-                                                <p class="card-text">J'ai une atmosphère composée d'oxygène</p>
-                                                <p class="card-text">Je possède de l'eau sous forme liquide</p>
-                                            </div>
-                                    <div class="card-footer justify-content-center">
-                                            <label for="answer">Enter your answer</label>
-                                        <div class="input-group mb-3">
-                                            <input type="text" class="form-control" placeholder="Enter your answer here" aria-label="Recipient's username" aria-describedby="button-addon2">
-                                                <div class="input-group-append">
-                                                    <button class="btn btn-outline-success" type="button" id="button-addon2">Validate</button>
-                                                </div>
-                                        </div>
-                                        <div>
-                                          <!-- Button trigger modal -->
-                                              <button type="button" class="btn btn-outline-secondary grosso" data-toggle="modal" data-target="#modEarth" >
-                                              
-                                              Need infos?
-                                              </button>
-                                          </div>
-                                    </div>
-                                    </div>
-                                    </div>
-  
-                                    <div class="col-lg-3">
-                    
-                                    <div class="card shadow border-secondary mb-3 w-100">
-                                            <img class="card-img-top max-width: 100%" src="https://solarsystem.nasa.gov/system/feature_items/images/28_saturn.png" alt="Saturn">
-                                                <div class="card-body">
-                                                    <h4 class="card-title">Qui suis-je ?</h4>
-                                                    <p class="card-text">Je possède des anneaux composés de glace </p>
-                                                    <p class="card-text">Je suis une géante gazeuse</p>
-                                                    <p class="card-text">Mes journées durent 10 heures terrestre</p>
-                                                </div>
-                                        <div class="card-footer justify-content-center">
-                                                <label for="answer">Enter your answer</label>
-                                            <div class="input-group mb-3">
-                                                <input type="text" class="form-control" placeholder="Enter your answer here" aria-label="Recipient's username" aria-describedby="button-addon2">
-                                                    <div class="input-group-append">
-                                                        <button class="btn btn-outline-success" type="button" id="button-addon2">Validate</button>
-                                                    </div>
-                                            </div>
-                                            <div>
-                                              <!-- Button trigger modal -->
-                                                  <button type="button" class="btn btn-outline-secondary grosso" data-toggle="modal" data-target="#modEarth" >
-                                                  
-                                                  Need infos?
-                                                  </button>
-                                              </div>
-                                        </div>
-                                        </div>
-                                        </div>
-  
-                                        <div class="col-lg-3">
-                    
-                                        <div class="card shadow border-secondary mb-3 w-100">
-                                                <img class="card-img-top max-width: 100%" src="https://solarsystem.nasa.gov/system/feature_items/images/18_mercury_new.png" alt="Mercure">
-                                                    <div class="card-body">
-                                                        <h4 class="card-title">Qui suis-je ?</h4>
-                                                        <p class="card-text">Je suis deux fois plus massive que toutes les planetes </p>
-                                                        <p class="card-text">Je suis une géante gazeuse</p>
-                                                        <p class="card-text">J'ai un gros point rouge à ma surface</p>
-                                                    </div>
-                                            <div class="card-footer justify-content-center">
-                                                    <label for="answer">Enter your answer</label>
-                                                <div class="input-group mb-3">
-                                                    <input type="text" class="form-control" placeholder="Enter your answer here" aria-label="Recipient's username" aria-describedby="button-addon2">
-                                                        <div class="input-group-append">
-                                                            <button class="btn btn-outline-success" type="button" id="button-addon2">Validate</button>
-                                                        </div>
-                                                </div>
-                                                <div>
-                                                  <!-- Button trigger modal -->
-                                                      <button type="button" class="btn btn-outline-secondary grosso" data-toggle="modal" data-target="#modEarth" >
-                                                      
-                                                      Need infos?
-                                                      </button>
-                                                  </div>
-                                            </div>
-                                            </div>
-                                        </div>
-                    
-  
-                                            
-                                            
-  
-                                            <div class="col-lg-3">
-  
-                                                <div class="card shadow border-secondary mb-3 w-100">
-                                                    <img class="card-img-top max-width: 100%" src="https://solarsystem.nasa.gov/system/feature_items/images/19_mars.png" alt="Mars">
-                                                        <div class="card-body">
-                                                            <h4 class="card-title">Qui suis-je ?</h4>
-                                                            <p class="card-text">Je possède deux lunes  </p>
-                                                            <p class="card-text">Je suis la 4ème planète du système solaire</p>
-                                                            <p class="card-text">On m'appelle la planète rouge</p>
-                                                        </div>
-                                                    <div class="card-footer justify-content-center">
-                                                        <div class="input-group mb-3">
-                                                            <input type="text" class="form-control" placeholder="Enter your answer here" aria-label="Recipient's username" aria-describedby="button-addon2">
-                                                                <div class="input-group-append">
-                                                                    <button class="btn btn-outline-success" type="button" id="button-addon2">Validate</button>
-                                                                </div>
-                                                        </div>
-                                                    
-                                                    <div>
-                                                      <!-- Button trigger modal -->
-                                                          <button type="button" class="btn btn-outline-secondary grosso" data-toggle="modal" data-target="#modEarth" >
-                                                          
-                                                          Need infos?
-                                                          </button>
-                                                      </div>
-                                                </div>
-                                            </div>
-                                          </div>
-                                          
-                                          
-                                            <div class="col-lg-3">
-                                                
-                                                </div>
-  
-                                                <div class="col-lg-3">
-                                                    
-                                                    </div>
-  
   
   </div>
   </div>
+</div>

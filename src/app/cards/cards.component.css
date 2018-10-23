@@ -1,55 +1,16 @@
 *{
-    box-sizing: border-box;
-}
-/*Flip Cards*/
-
-/* entire container, keeps perspective */
-.flip-container {
-	perspective: 1000px;
-}
-	/* flip the pane when hovered */
-	.flip-container:hover .flipper, .flip-container.hover .flipper {
-		transform: rotateY(180deg);
-	}
-
-.flip-container, .front, .back {
-	width: 188px;
-	height: 187px;
+  font-family: 'Kodchasan', sans-serif;
 }
 
-/* flip speed goes here */
-.flipper {
-	transition: 0.6s;
-	transform-style: preserve-3d;
-
-	position: relative;
+*{
+	box-sizing: border-box;
 }
-
-/* hide back of pane during swap */
-.front, .back {
-	backface-visibility: hidden;
-
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-
-/* front pane, placed above back */
-.front {
-	z-index: 2;
-	/* for firefox 31 */
-	transform: rotateY(0deg);
-}
-
-/* back, initially hidden pane */
-.back {
-	transform: rotateY(180deg);
-}
-
-
-
-
 /* Cards */
+
+.card-body{
+    background-color: whitesmoke;
+}
+/* Shadow 3D effect */
 .card
 {
   position: relative;
@@ -85,10 +46,73 @@
   left: auto;
 }
 
+/* Max height of card body */
+.card-body {
+  height: 16em;
+
+/* Hover effect */
+}
+.card-body:hover{
+  background-color: beige;
+
+}
+
+.cards:hover{
+  box-shadow: 5px 0px 25px #777, 5px 0px 25px white, 5px 0px 25px #777;
+  
+  }
+
+  .container-fluid{
+    background: linear-gradient(black, blue);
+  }
 
 
 
-#}
-#.grosso{
-#	width: 24.7em;
-#}
+
+
+
+ 
+
+
+
+
+
+
+
+
+  
+  .tp-box {
+    
+    position: relative;
+    width: 15em;
+    height: 10em;
+    margin: 10% auto 40% auto;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-transform         : transform 1s;
+        -ms-transform         : transform 1s;
+            transform         : transform 1s;
+  }
+  .tp-box__side {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+   
+
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+   
+  }
+  .tp-box__front {
+    
+    -webkit-transform : rotateY(0deg);
+    -ms-transform     : rotateY(0deg);
+    transform         : rotateY(0deg);
+  }
+  .tp-box__back {
+   
+    -webkit-transform : rotateY(-180deg);
+    -ms-transform     : rotateY(-180deg);
+    transform         : rotateY(-180deg);
+  }
