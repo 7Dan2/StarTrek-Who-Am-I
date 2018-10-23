@@ -37,25 +37,27 @@
 
   .text-log-top{
       font-size: 30px;
-  }
+}
   
   
   .text-log-bottom{
       font-size: 18px;
 
 
-  }
+}
   .lead{
       border-radius: 20px;
-  }
-  .slg {
-      margin-top: 5em;
-  }
-  .jpp{
+}
+.SLG{
+    margin-top:5em;
+}
+
+.jpp {
       position: relative;
-      margin: 0em 0em -2.7em 0em;
+      margin : 0em 0em -2.8em 0em;
       font-size: 3em;
-      color:white;
-      
-    
-  }
+      color: white;
+}
+.str{
+    border-radius: 5em;
+}

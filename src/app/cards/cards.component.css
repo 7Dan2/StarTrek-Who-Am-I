@@ -1,10 +1,7 @@
-*{
-  font-family: 'Kodchasan', sans-serif;
-}
 
 *{
-  box-sizing: border-box;
   font-family: 'Kodchasan', sans-serif;
+	box-sizing: border-box;
 }
 /* Cards */
 
@@ -83,9 +80,9 @@
 
   
   .tp-box {
-    
+    /* font-family: 'Kodchasan', sans-serif; */
     position: relative;
-    width: 15em;
+    width: 14em;
     height: 10em;
     margin: 10% auto 40% auto;
     -webkit-transform-style: preserve-3d;
