@@ -31,7 +31,7 @@
                             <span class="momo">PLANETS</span>
                           </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="planets">
-                            <a *ngFor="let data of list;let i=index" class="dropdown-item"  data-toggle="modal" [attr.data-target]="'#' + data.name" href="#">{{data.name}}</a>
+                            <a *ngFor="let data of list;let i=index" class="dropdown-item text-white"  id="menus"  data-toggle="modal" [attr.data-target]="'#' + data.name" href="#">{{data.name}}</a>
                             
                           </div>
                           <app-modal></app-modal>
@@ -51,7 +51,7 @@
                                 <span class="momo">MYTHS</span>
                               </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="myths">
-                                <a *ngFor="let data of list;let i=index" class="dropdown-item"  data-toggle="modal" [attr.data-target]="'#' + data.name + '1'" href="#">{{data.name}}</a>
+                                <a *ngFor="let data of list;let i=index" class="dropdown-item text-white"  id="menus" data-toggle="modal" [attr.data-target]="'#' + data.name + '1'" href="#">{{data.name}}</a>
                                 
                               </div>
                               <app-modal></app-modal>
