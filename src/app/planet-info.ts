@@ -1,5 +1,6 @@
 
-export class PlanetInfo {
+export class PlanetInfo {  
+    //Structure d'un object de type PlanetInfo
 
 
     public name:string = "no_name";
