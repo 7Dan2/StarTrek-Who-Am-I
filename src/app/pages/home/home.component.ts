@@ -9,23 +9,24 @@ import { ApodService } from 'src/app/services/apod.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  public name:string ="../../../assets/apod.jpg";
-  setMyStyles() {
-    let styles = {
+  public name:string ="../../../assets/apod.jpg"; // propriété qui contient  l'url d'une image
+
+  setMyStyles() { //methode qui applique un style
+    let styles = { //propriété qui contient une liste de propriété css
       'background': 'url(' + this.name + ') no-repeat center center fixed',
       'background-size': 'cover',
       'height': '100%',
       'overflow': 'hidden',
       'font-family': 'Kodchasan , sans-serif', 
     };
-    return styles;
+    return styles; // retourne nos style
   }
 
  
-  private service:ApodService;
-  public apod:ApodData[];
-  constructor(param_service:ApodService) {
-    this.service = param_service;  
+  private service:ApodService; // propriété  par laquel on utilisera notre service pour recuperernos APODS
+  public apod:ApodData[]; // Propriété qui stoquera nos donnés recuperer par le service.
+  constructor(param_service:ApodService) { //Injection de notre service
+    this.service = param_service;  //on affecte notre parametre a notre propriété service
 
    }
   
@@ -35,13 +36,13 @@ export class HomeComponent implements OnInit {
    
      
 
-    this.service.getAll()
-    .subscribe(
-      (apodDatas:ApodData[]) =>  {  
-        this.apod = apodDatas;
+    this.service.getAll() //souscription a notre service dans notre interface ngOninit
+    .subscribe( 
+      (apodDatas:ApodData[]) =>  {   
+        this.apod = apodDatas;// affectation des donnes retourner par le service a notre propriété apod
       }
     );
-   
+            //Utilisation de setTimeout pour creer notre Diaporama
   setTimeout(() => {
     this.name = this.apod[0].hdurl;  
     this.setMyStyles();
@@ -53,7 +54,7 @@ export class HomeComponent implements OnInit {
   }, 20000);
 
   setTimeout(() => {
-    this.name = this.apod[2].hdurl;  
+    this.name = this.apod[2].hdurl;        // Une image sera afficher  tout les 10 secondes 
     this.setMyStyles();
   }, 30000);
 
@@ -61,11 +62,6 @@ export class HomeComponent implements OnInit {
     this.name = this.apod[3].hdurl;  
     this.setMyStyles();
   }, 40000);
-
-  // setTimeout(() => {
-  //   this.name = this.apod[4].hdurl;  
-  //   this.setMyStyles();
-  // }, 50000);
 
   setTimeout(() => {
     this.name = "../../../assets/apod3.jpg";
