@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import { Planet } from '../planet';
 import { PlanetService } from '../services/planet.service';
 import { PlanetInfo } from '../planet-info';
 
@@ -8,9 +7,9 @@ import { PlanetInfo } from '../planet-info';
   selector: 'app-cards',
   templateUrl: './cards.component.html',
   styleUrls: ['./cards.component.css'],
-  animations: [
-    trigger('flipState', [
-      state('active', style({
+  animations: [    // Animation de la carte
+    trigger('flipState', [ 
+      state('active', style({ 
         transform: 'rotateY(179deg)'
       })),
       state('inactive', style({
@@ -23,59 +22,48 @@ import { PlanetInfo } from '../planet-info';
 })
 export class CardsComponent implements OnInit {
 
- 
+  public answer:boolean = false; // propriété qui permet de savoir quoi afficher lors ce que la carte se retourne.
+  private service:PlanetService; // Notre service qui recuperera les informations sur les planetes pour nous.
+  public list:PlanetInfo[]; // Propriété qui stoquera nos donnés recuperer par le service.
+  public response:string[] = ["","","","","","","","","",""];
   
-
- 
-
-  // imageState:boolean = false;
-  // turnImage(){
-  //   this.imageState = !this.imageState;
-  // }
-  public answer:boolean = false;
-  private service:PlanetService;
-  public list:PlanetInfo[];
-  
-  public tabResponse:string[] = ["Mercury","Venus","Earth","Mars","Jupiter","Saturn","Uranus","Neptune"];
-  public tabInput:string[] = ["","","","","","","","","",""];
-  public planetReponse:string;
-  constructor(param_service:PlanetService){
-    this.service = param_service;
-    this.list = [];
+  constructor(public param_service:PlanetService){ //Injection de notre service
+    
+    this.service = param_service;  //on affecte notre parametre a notre propriété service
+    this.list = []; //initialisation de notre propriété list
 
   }
 
   public ngOnInit():void {
-    //this.list = this.service.getTravels();
-    this.service.getPlanets()
-      .subscribe(resTravelData => this.list = resTravelData);
-      console.log(this.list);
-  }
-  onSubmit(planetName:any,userResponse:any,data:any){ //Data = propriété de List
-    
-   
-    console.log(planetName);// Vrai non en DUR
-    if(userResponse.toLowerCase() == planetName.toLowerCase()){ 
-      // compare Reponse utilisateur
-      this.toggleFlip(data)
-      this.answer = true;
-       
-      console.log("YESS");
+     
+    this.service.getPlanets() //souscription a notre service dans notre interface ngOninit
+      .subscribe(resTravelData => this.list = resTravelData); // affectation des donnes retourner par le service a list
       
-      console.log(data.flip + " Prop envoyer en arg");
-    }else if(userResponse.toLowerCase() != ''){
-      this.answer = false;
-      console.log("NOOO");
-      this.toggleFlip(data)
+  }
+  public onSubmit(planetName:any,userResponse:any,data:any){ // fonction qui est appeller lors ce qu'on valide une carte
+    
+   // planetName: le nom de la planete sur la carte valeur stoquer en dur
+   // userResponse: La réponse saisie par l'utilisateur sur le formulaire
+   // La carte en cours pour pouvoir la retourner avec notre animation
+    
+    if(userResponse.toLowerCase() == planetName.toLowerCase()){ 
+      //si reponse utilisateur est la meme que la donéne en dur  le tout en lowercase
+       
+      this.toggleFlip(data) //Retourer la carte
+      this.answer = true; // answer passe de false(par defaut) a true
+       
+    }else if(userResponse.toLowerCase() != ''){ 
+      // Si l'utilisateur  ne saisie rien 
+      this.answer = false; // answer deviens false
+      this.toggleFlip(data) // retrouner la carte
       
     }
-
     
      
   }
-  flip: string = 'inactive';
+  public flip: string = 'inactive'; // propriété qui contient l'etat de la carte (par defaut innactive)
 
-  toggleFlip(item:any) {
+  public toggleFlip(item:any) { //fonction qui change le flip de innactive a active et vice versa
     item.flip = (item.flip == 'inactive') ? 'active' : 'inactive';
   }
 
