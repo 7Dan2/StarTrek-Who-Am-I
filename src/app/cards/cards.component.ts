@@ -26,6 +26,7 @@ export class CardsComponent implements OnInit {
   private service:PlanetService; // Notre service qui recuperera les informations sur les planetes pour nous.
   public list:PlanetInfo[]; // Propriété qui stoquera nos donnés recuperer par le service.
   public response:string[] = ["","","","","","","","","",""];
+  // propriété qui contiendra chaque reponse de l'utilisateur via ngModel(par defaut vide pour ne rien afficher de base)
   
   constructor(public param_service:PlanetService){ //Injection de notre service
     
@@ -64,7 +65,7 @@ export class CardsComponent implements OnInit {
   public flip: string = 'inactive'; // propriété qui contient l'etat de la carte (par defaut innactive)
 
   public toggleFlip(item:any) { //fonction qui change le flip de innactive a active et vice versa
-    item.flip = (item.flip == 'inactive') ? 'active' : 'inactive';
+    item.flip = (item.flip == 'inactive') ? 'active' : 'inactive'; // ternaire pour switcher d'un etat a un autre
   }
 
 
