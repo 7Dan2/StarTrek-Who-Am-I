@@ -11,19 +11,18 @@ export class ModalComponent implements OnInit {
 
 
    
-  private service:PlanetService;
-  public list:PlanetInfo[];
+  private service:PlanetService;// propriété  par laquel on utilisera notre service pour recuperer les informations sur les planetes.
+  public list:PlanetInfo[]; // Propriété qui stoquera nos donnés recuperer par le service.
   
-  constructor(param_service:PlanetService){
-    this.service = param_service;
-    this.list = [];
+  constructor(param_service:PlanetService){ //Injection de notre service
+    this.service = param_service; //on affecte notre parametre a notre propriété service
+    this.list = []; //initialisation de notre propriété list
 
   }
 
   public ngOnInit():void {
-    //this.list = this.service.getTravels();
-    this.service.getPlanets()
-      .subscribe(resTravelData => this.list = resTravelData);
+    this.service.getPlanets() //souscription a notre service dans notre interface ngOninit
+      .subscribe(resTravelData => this.list = resTravelData); // affectation des donnes retourner par le service a list
   }
 
 }
