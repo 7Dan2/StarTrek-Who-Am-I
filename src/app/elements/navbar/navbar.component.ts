@@ -1,5 +1,4 @@
 
-import { Planet } from './../../planet';
 import { Component, OnInit } from '@angular/core';
 import { PlanetService } from 'src/app/services/planet.service';
 import { PlanetInfo } from 'src/app/planet-info';
