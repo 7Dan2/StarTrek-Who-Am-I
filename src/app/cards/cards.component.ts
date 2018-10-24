@@ -23,7 +23,7 @@ import { PlanetInfo } from '../planet-info';
 export class CardsComponent implements OnInit {
 
   public answer:boolean = false; // propriété qui permet de savoir quoi afficher lors ce que la carte se retourne.
-  private service:PlanetService; // Notre service qui recuperera les informations sur les planetes pour nous.
+  private service:PlanetService; // propriété  par laquel on utilisera notre service pour recuperer les informations sur les planetes.
   public list:PlanetInfo[]; // Propriété qui stoquera nos donnés recuperer par le service.
   public response:string[] = ["","","","","","","","","",""];
   // propriété qui contiendra chaque reponse de l'utilisateur via ngModel(par defaut vide pour ne rien afficher de base)
