@@ -48,16 +48,19 @@
   .lead{
       border-radius: 20px;
 }
-.SLG{
+.responsive-button{
     margin-top:5em;
+    margin-bottom: 1em;
 }
 
-.jpp {
+.text-game {
       position: relative;
       margin : 0em 0em -2.8em 0em;
-      font-size: 3em;
-      color: white;
+      font-size: 2.5em;
+      color: white; 
 }
-.str{
+.str-gif{
     border-radius: 5em;
+    border-color: black;
+    
 }
