@@ -1,4 +1,48 @@
-[
+[ 
+    {
+    "name":"Venus",
+    "img":"https://solarsystem.nasa.gov/system/feature_items/images/27_venus_jg.png",
+    "satellite":0,
+    "enigme":[
+        ["I'm Earth sized"],
+        ["My day lenght is 223 terrestrial days"],
+        ["I have had formely water on my surface"]
+       ],
+       "flip":"inactive",
+       "mythsImg":"https://res.cloudinary.com/jerrick/image/upload/f_auto,fl_progressive,q_auto,c_fit,w_1100/dwtsy7ocz24k9obtkboq",
+       "mythsDesc": ["Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quae ipsam, accusantium molestiae adipisci reprehenderit ullam ducimus sit debitis sequi eius temporibus unde, eaque dignissimos blanditiis amet molestias voluptatum odit.Tempora ratione ipsam optio, laboriosam reprehenderit laborum. Cumque, alias maxime. Illo eius animi odit quos ullam aliquid dolor accusantium tempora magnam beatae, rerum et, ratione nihil nesciunt non est voluptate."]
+
+},
+    
+    {
+        "name":"Neptune",
+        "img":"https://solarsystem.nasa.gov/system/feature_items/images/30_neptune.png",
+        "satellite":14,
+        "enigme":[
+            ["Voyager 2 is the only spacecraft to have visited me"],
+            ["I'm an ice giant"],
+            ["I'm the most distant planet of the solar system"]          
+           ],
+           "flip":"inactive",
+           "mythsImg":"https://cdn.britannica.com/30/133930-131-580E6710.jpg",
+           "mythsDesc": ["Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quae ipsam, accusantium molestiae adipisci reprehenderit ullam ducimus sit debitis sequi eius temporibus unde, eaque dignissimos blanditiis amet molestias voluptatum odit.Tempora ratione ipsam optio, laboriosam reprehenderit laborum. Cumque, alias maxime. Illo eius animi odit quos ullam aliquid dolor accusantium tempora magnam beatae, rerum et, ratione nihil nesciunt non est voluptate."]
+
+    },
+    {
+        "name":"Uranus",
+        "img":"https://solarsystem.nasa.gov/system/feature_items/images/29_uranus.png",
+        "satellite":27,
+        "enigme":[
+            ["I own 27 moons and 13 rings"],
+            ["I'm the unique planet who rotates on its side."],
+            ["Human life is not supported on my surface"]           
+           ],
+           "flip":"inactive",
+           "mythsImg":"http://www.kelleyrosano.com/wp-content/uploads/2013/12/Capricorn-Solstice.jpg",
+           "mythsDesc": ["Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quae ipsam, accusantium molestiae adipisci reprehenderit ullam ducimus sit debitis sequi eius temporibus unde, eaque dignissimos blanditiis amet molestias voluptatum odit.Tempora ratione ipsam optio, laboriosam reprehenderit laborum. Cumque, alias maxime. Illo eius animi odit quos ullam aliquid dolor accusantium tempora magnam beatae, rerum et, ratione nihil nesciunt non est voluptate."]
+
+    },
+    
     {
         "name":"Mercury",
         "img":"https://solarsystem.nasa.gov/system/feature_items/images/18_mercury_new.png",
@@ -13,20 +57,6 @@
         "mythsDesc": ["Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quae ipsam, accusantium molestiae adipisci reprehenderit ullam ducimus sit debitis sequi eius temporibus unde, eaque dignissimos blanditiis amet molestias voluptatum odit.Tempora ratione ipsam optio, laboriosam reprehenderit laborum. Cumque, alias maxime. Illo eius animi odit quos ullam aliquid dolor accusantium tempora magnam beatae, rerum et, ratione nihil nesciunt non est voluptate."]
             
             
-    },
-    {
-        "name":"Venus",
-        "img":"https://solarsystem.nasa.gov/system/feature_items/images/27_venus_jg.png",
-        "satellite":0,
-        "enigme":[
-            ["I'm Earth sized"],
-            ["My day lenght is 223 terrestrial days"],
-            ["I have had formely water on my surface"]
-           ],
-           "flip":"inactive",
-           "mythsImg":"https://res.cloudinary.com/jerrick/image/upload/f_auto,fl_progressive,q_auto,c_fit,w_1100/dwtsy7ocz24k9obtkboq",
-           "mythsDesc": ["Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quae ipsam, accusantium molestiae adipisci reprehenderit ullam ducimus sit debitis sequi eius temporibus unde, eaque dignissimos blanditiis amet molestias voluptatum odit.Tempora ratione ipsam optio, laboriosam reprehenderit laborum. Cumque, alias maxime. Illo eius animi odit quos ullam aliquid dolor accusantium tempora magnam beatae, rerum et, ratione nihil nesciunt non est voluptate."]
-
     },
     {
         "name":"Earth",
@@ -83,35 +113,9 @@
            "mythsImg":"https://i.pinimg.com/originals/2c/fa/5b/2cfa5b42ad89baffe1ad8763d7270463.jpg",
            "mythsDesc": ["Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quae ipsam, accusantium molestiae adipisci reprehenderit ullam ducimus sit debitis sequi eius temporibus unde, eaque dignissimos blanditiis amet molestias voluptatum odit.Tempora ratione ipsam optio, laboriosam reprehenderit laborum. Cumque, alias maxime. Illo eius animi odit quos ullam aliquid dolor accusantium tempora magnam beatae, rerum et, ratione nihil nesciunt non est voluptate."]
 
-    },
-    {
-        "name":"Uranus",
-        "img":"https://solarsystem.nasa.gov/system/feature_items/images/29_uranus.png",
-        "satellite":27,
-        "enigme":[
-            ["I own 27 moons and 13 rings"],
-            ["I'm the unique planet who rotates on its side."],
-            ["Human life is not supported on my surface"]           
-           ],
-           "flip":"inactive",
-           "mythsImg":"http://www.kelleyrosano.com/wp-content/uploads/2013/12/Capricorn-Solstice.jpg",
-           "mythsDesc": ["Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quae ipsam, accusantium molestiae adipisci reprehenderit ullam ducimus sit debitis sequi eius temporibus unde, eaque dignissimos blanditiis amet molestias voluptatum odit.Tempora ratione ipsam optio, laboriosam reprehenderit laborum. Cumque, alias maxime. Illo eius animi odit quos ullam aliquid dolor accusantium tempora magnam beatae, rerum et, ratione nihil nesciunt non est voluptate."]
-
-    },
-    {
-        "name":"Neptune",
-        "img":"https://solarsystem.nasa.gov/system/feature_items/images/30_neptune.png",
-        "satellite":14,
-        "enigme":[
-            ["Voyager 2 is the only spacecraft to have visited me"],
-            ["I'm an ice giant"],
-            ["I'm the most distant planet of the solar system"]          
-           ],
-           "flip":"inactive",
-           "mythsImg":"https://cdn.britannica.com/30/133930-131-580E6710.jpg",
-           "mythsDesc": ["Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quae ipsam, accusantium molestiae adipisci reprehenderit ullam ducimus sit debitis sequi eius temporibus unde, eaque dignissimos blanditiis amet molestias voluptatum odit.Tempora ratione ipsam optio, laboriosam reprehenderit laborum. Cumque, alias maxime. Illo eius animi odit quos ullam aliquid dolor accusantium tempora magnam beatae, rerum et, ratione nihil nesciunt non est voluptate."]
-
     }
+    
+   
 
 
 ]

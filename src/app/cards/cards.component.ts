@@ -9,7 +9,7 @@ import { PlanetInfo } from '../planet-info';
   styleUrls: ['./cards.component.css'],
   animations: [    // Animation de la carte
     trigger('flipState', [ 
-      state('active', style({ 
+      state('active', style({    // Void,  Default( * ), Custom 
         transform: 'rotateY(179deg)'
       })),
       state('inactive', style({
@@ -26,12 +26,14 @@ export class CardsComponent implements OnInit {
   private service:PlanetService; // propriété  par laquel on utilisera notre service pour recuperer les informations sur les planetes.
   public list:PlanetInfo[]; // Propriété qui stoquera nos donnés recuperer par le service.
   public response:string[] = ["","","","","","","","","",""];
+  
   // propriété qui contiendra chaque reponse de l'utilisateur via ngModel(par defaut vide pour ne rien afficher de base)
   
   constructor(public param_service:PlanetService){ //Injection de notre service
     
     this.service = param_service;  //on affecte notre parametre a notre propriété service
     this.list = []; //initialisation de notre propriété list
+    
 
   }
 
@@ -52,11 +54,23 @@ export class CardsComponent implements OnInit {
        
       this.toggleFlip(data) //Retourer la carte
       this.answer = true; // answer passe de false(par defaut) a true
+      setTimeout(() => {
+
+        this.toggleFlip(data);
+
+       }, 4000);
+      
        
     }else if(userResponse.toLowerCase() != ''){ 
       // Si l'utilisateur  ne saisie rien 
       this.answer = false; // answer deviens false
       this.toggleFlip(data) // retrouner la carte
+
+      setTimeout(() => {
+
+        this.toggleFlip(data);
+
+       }, 4000);
       
     }
     
