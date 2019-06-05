@@ -1,26 +1,30 @@
-import { JumbotronComponent } from './elements/jumbotron/jumbotron.component';
+import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgModule } from '@angular/core';
+import { AppComponent } from './app.component';
+import { HttpModule } from '@angular/http';
+
+//######### Components #########
+
+import { JumbotronComponent } from './elements/jumbotron/jumbotron.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NavbarComponent } from './elements/navbar/navbar.component';
 import { ModalComponent } from './modal/modal.component';
 import { CardsComponent } from './cards/cards.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
-import { RouterModule, Routes } from '@angular/router';
-import { FormsModule } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { AppComponent } from './app.component';
+//######### Services #########
+
 import { PlanetService } from './services/planet.service';
-import { HttpModule } from '@angular/http';
 
 const appRoutes: Routes = [
-  { path: '',component: HomeComponent },
-  { path: 'game',component: CardsComponent },
-
+  { path: '', redirectTo: 'homePage', pathMatch: 'full'},
+  { path: 'homePage', component: HomeComponent},
+  { path: 'game', component: CardsComponent },
+  { path: '**', component: PageNotFoundComponent}
 ];
-
-
-
 
 @NgModule({
   declarations: [
@@ -29,7 +33,8 @@ const appRoutes: Routes = [
     HomeComponent,
     NavbarComponent,
     JumbotronComponent,
-    ModalComponent
+    ModalComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

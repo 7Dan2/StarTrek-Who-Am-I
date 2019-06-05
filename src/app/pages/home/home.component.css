@@ -2,7 +2,6 @@
 /* You can add global styles to this file, and also import other style files */
 * {
   font-family: 'Kodchasan', sans-serif;
-  
 }
 
 .comp-body {           
@@ -10,8 +9,6 @@
     background-size: cover;
     height: 100%;
     overflow: hidden;
-    
-     
-  }
+}
 
 

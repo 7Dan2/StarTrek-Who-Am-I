@@ -19,58 +19,48 @@ export class HomeComponent implements OnInit {
       'overflow': 'hidden',
       'font-family': 'Kodchasan , sans-serif', 
     };
-    return styles; // retourne nos style
+    return styles; // retourne nos styles
   }
 
  
   private service:ApodService; // propriété  par laquel on utilisera notre service pour recuperernos APODS
-  public apod:ApodData[]; // Propriété qui stoquera nos donnés recuperer par le service.
+  public apod:ApodData[]; // Propriété qui stoquera nos données recupérées par le service.
   constructor(param_service:ApodService) { //Injection de notre service
-    this.service = param_service;  //on affecte notre parametre a notre propriété service
-
-   }
+    this.service = param_service;  //on affecte notre parametre à la propriété service
+}
   
+ngOnInit() {
    
-  
-  ngOnInit() {
-   
-     
-
-    this.service.getAll() //souscription a notre service dans notre interface ngOninit
+  this.service.getAll() //souscription à notre service dans notre interface ngOninit
     .subscribe( 
       (apodDatas:ApodData[]) =>  {   
-        this.apod = apodDatas;// affectation des donnes retourner par le service a notre propriété apod
+        this.apod = apodDatas;// affectation des données retournées par le service dans notre propriété apod
       }
     );
-            //Utilisation de setTimeout pour creer notre Diaporama
-  setTimeout(() => {
-    this.name = this.apod[0].hdurl;  
-    this.setMyStyles();
-  }, 10000);
+            //Utilisation de setTimeout pour créer notre diaporama
+setTimeout(() => {
+  this.name = this.apod[0].hdurl;  
+  this.setMyStyles();
+}, 10000);
 
-  setTimeout(() => {
-    this.name = this.apod[1].hdurl;  
-    this.setMyStyles();
-  }, 20000);
+setTimeout(() => {
+  this.name = this.apod[1].hdurl;  
+  this.setMyStyles();
+}, 20000);
 
-  setTimeout(() => {
-    this.name = this.apod[2].hdurl;        // Une image sera afficher  tout les 10 secondes 
-    this.setMyStyles();
-  }, 30000);
+setTimeout(() => {
+  this.name = this.apod[2].hdurl;        // Une image sera afficher  tout les 10 secondes 
+  this.setMyStyles();
+}, 30000);
 
-  setTimeout(() => {
-    this.name = this.apod[3].hdurl;  
-    this.setMyStyles();
-  }, 40000);
+setTimeout(() => {
+  this.name = this.apod[3].hdurl;  
+  this.setMyStyles();
+}, 40000);
 
-  setTimeout(() => {
-    this.name = "../../../assets/apod3.jpg";
-    this.setMyStyles();
-  }, 50000);
+setTimeout(() => {
+  this.name = "../../../assets/apod3.jpg";
+  this.setMyStyles();
+}, 50000);
 
-   
-   
-}
-
- 
-}
+}}
