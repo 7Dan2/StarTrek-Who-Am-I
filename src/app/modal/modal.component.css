@@ -1,0 +1,26 @@
+* {
+    font-family: 'Kodchasan', sans-serif;
+    
+    color: white;
+}
+.modal-content{
+    color: white;
+    text-align: justify;
+    background: linear-gradient(grey, rgba(157, 205, 221, 0.87));
+}
+h3{
+    color: white;
+    text-align: center;
+    text-shadow: 5px 0 10px #FFB200;
+}
+
+h5{
+    color: lightgoldenrodyellow;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px silver, 0 0 70px silver, 0 0 80px silver, 0 0 100px silver, 0 0 150px silver;
+    
+}
+
+.link a{
+    color: orangered;
+    text-decoration: none;
+}

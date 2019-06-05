@@ -1,0 +1,87 @@
+<div class="container-fluid">  <!-- NavBar-->
+    <div class="row">
+    <div class="col-lg-12 col-md-12">
+<app-navbar></app-navbar>
+</div>
+</div>
+    <!-- ######### Empty row ######### -->
+    <div class="row  w-50 p-3"></div>
+  
+    <!-- ######### First row ######### -->
+    <div class="row">
+  
+        <div class="col-lg-12 col-md-12">
+    
+    <div class="card-deck">   <!-- Notre unique carte qu'on va remplir a la volée autant de fois qu'on a de Planet-->
+      
+        <div *ngFor="let data of list;let i=index" class="col-lg-3 col-md-6 col-sm-6 col-xs-12"> <!-- Boucle ngFor  pour generer notre carte-->
+          
+            <div class="card cards border-secondary mb-3 w-100">
+                    
+                        
+                     <div class="tp-box" [@flipState]="data.flip"> <!-- Permet de retourner la carte lorscequ'on appele la fonction toggleFlip-->
+                            <div class="tp-box__side tp-box__front rounded"> <!-- la façe visible de la carte ( le logo starfleet dans notre cas) -->
+                              <img class="card-img-top rounded" src="https://uss-theurgy.com/w/images/b/bb/Starfleet_command_emblem.png" alt="" id="img1">
+                            
+                            </div>
+                            <div *ngIf=(answer) class="tp-box__side tp-box__back">
+                                    <img  class="card-img-top" src="{{data.img}}" alt="Jupiter" id="img1" >
+                                    <h2 class="text-center" style="color: green">Yes I'm {{data.name}}</h2>
+                            </div>
+
+                            <div *ngIf=(!answer) class="tp-box__side tp-box__back"><!-- L'arrire de notre carte.Vsisible uniquement lors ce qu'on retourne la carte-->
+                                <img  class="card-img-top" src="http://coolsandfools.com/wp-content/uploads/2015/04/funny-star-trek-18.jpg" alt="Jupiter" id="img1" > <!-- Affiche une image drole-->
+                                <h1 class="text-center" style="color: red">TRY AGAIN</h1>  <!-- Affiche Try Again si la reponse est incorrect-->
+                        </div>
+                            
+                        </div>
+                  
+                     
+                    
+                
+                <div class="card-body ">
+                      
+                        <h4 class="card-title text-center text-info">Who Am I ?</h4>
+                        <p class="card-text">{{data.enigme[0]}}</p>
+                        <p class="card-text">{{data.enigme[1]}}</p>
+                        <p class="card-text">{{data.enigme[2]}}</p>
+                      
+                </div> 
+                    <div class="card-footer justify-content-center">
+                     
+                      <div class="input-group mb-3">
+                        
+                            <input type="text" class="form-control" [(ngModel)]="response[i]" name={{data.name}}  placeholder="Reponse"  aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <!--   Reponse saisie envoyer a notre tableau de rpeonse via ngModel 2 way binding-->
+                        
+  
+                       
+                            <div class="input-group-append" >
+                                    <button  (click)="onSubmit(data.name,response[i],list[i])" class="btn btn-outline-success" type="button" id="button-addon2">Validate</button>
+                                    <!-- Recuperation du nom de la carte en cours, la reponse de l'utilisateur et l'object en cours-->
+                            </div>   
+                              
+                          </div>
+  
+                              <div>
+                              <!-- Boutton qui appel le modal -->
+                                  <button   type="button" class="btn btn-outline-secondary  btn-block" data-toggle="modal" [attr.data-target]="'#' + data.name" >
+                                  
+                                  Need infos?
+                                  </button>
+                              </div>
+                    </div>
+                             <app-modal></app-modal>  <!--  Affichage du modal correspondant en fonction de la carte selectioner-->
+                        
+              </div>
+           </div>  
+  
+      
+      
+      
+        </div>
+                            
+  
+  </div>
+  </div>
+</div>
