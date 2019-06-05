@@ -1,0 +1,75 @@
+<!-- Planets and moons -->
+
+<div  *ngFor="let data of list;let i=index" class="modal fade" id="{{data.name}}" tabindex="-1" role="dialog" aria-labelledby="modJupit" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="planetsAndMoons">More infos on {{data.name.toUpperCase()}}</h5>
+        <button type="button" class="btn btn-outline-secondary close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col">
+            <img class="card-img-top" src="{{data.img}}" alt="{{data.name}}" id="img1">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <h3>Overview</h3>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi, soluta quo ratione corporis iusto sapiente! Commodi totam quasi fuga quidem tempora. Ratione nulla vitae quo at exercitationem saepe repellendus reprehenderit.</p>
+          </div>
+          <div class="col">
+            <h3>News from {{data.name}}</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem atque alias quas beatae ut eaque vitae sunt velit, qui voluptas. Ipsum rem est nostrum eligendi maxime illo. Nostrum, ea ratione!</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col link text-center">
+            <a target="_blank" href="https://solarsystem.nasa.gov/planets/{{data.name.toLowerCase()}}/overview/">Explore more on NASA's website</a> <!-- plan to downcase for link to NASA for the specific planet-->
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Myths and Legends -->
+
+<div  *ngFor="let data of list;let i=index" class="modal fade" id="{{data.name}}1" tabindex="-1" role="dialog" aria-labelledby="modJupit" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="Myths">Myths and legends about {{data.name.toUpperCase()}}</h5>
+      <button type="button" class="btn btn-outline-secondary close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="row">
+        <div class="col">
+          <img class="card-img-top rounded" src="{{data.mythsImg}}" alt="{{data.name}}" id="img1">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h3 class="text-center p-3">Story:</h3>
+        <p>{{data.mythsDesc}}</p>
+        </div>
+       
+      </div>
+      
+    </div>
+    <div class="modal-footer justify-content-center">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      
+    </div>
+  </div>
+</div>

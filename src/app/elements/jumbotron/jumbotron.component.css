@@ -1,0 +1,54 @@
+*{
+    font-family: 'Kodchasan', sans-serif;
+}
+
+.vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+    background-color:transparent !important;
+    display: flex;
+    align-items: center;
+    
+}
+ 
+  .middle-text{
+      font-size: 25px;
+  }
+
+  .top-text{
+      font-size: 45px;
+  }
+
+  .nav-items-center{
+    font-size: 20px;
+}
+
+  .text-log-top{
+      font-size: 30px;
+}
+  
+  
+  .text-log-bottom{
+      font-size: 18px;
+
+
+}
+  .lead{
+      border-radius: 20px;
+}
+.responsive-button{
+    margin-top:5em;
+    margin-bottom: 1em;
+}
+
+.text-game {
+      position: relative;
+      margin : 0em 0em -2.8em 0em;
+      font-size: 2.5em;
+      color: white; 
+}
+.str-gif{
+    border-radius: 5em;
+    border-color: black;
+    
+}
